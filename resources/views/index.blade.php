@@ -58,7 +58,7 @@
     <main id="main">
       <!-- ======= Hero Slider Section ======= -->
       <section id="hero-slider" class="hero-slider">
-        @include('user.layouts.hero')
+        @include('user-layouts.hero')
       </section>
       <!-- End Hero Slider Section -->
 

@@ -1,8 +1,9 @@
 <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 	<a href="index.html" class="logo d-flex align-items-center">
 		<!-- Uncomment the line below if you also wish to use an image logo -->
-		<!-- <img src="assets/img/logo.png" alt=""> -->
-		<h1>ZenBlog</h1>
+		{{-- <img src="assets/img/logo.png" alt=""> --}}
+		<img src="{{asset('assets/bkn/logobkn.jpeg')}}" alt=""> <img src="assets/bkn/berakhlak.png" alt=""> </a>
+		{{-- <h1><a href="index.html"> </h1> --}}
 	</a>
 
 	<nav id="navbar" class="navbar">
@@ -47,10 +48,8 @@
 		<a href="#" class="mx-2"><span class="bi-twitter"></span></a>
 		<a href="#" class="mx-2"><span class="bi-instagram"></span></a>
 
-		<a href="#" class="mx-2 js-search-open"
-			><span class="bi-search"></span
-		></a>
-		<i class="bi bi-list mobile-nav-toggle"></i>
+		<a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
+		{{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
 
 		<!-- ======= Search Form ======= -->
 		<div class="search-form-wrap js-search-form-wrap">
