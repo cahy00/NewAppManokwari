@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
+use App\Models\Category;
 
-class PostController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $post = Post::with(['category'])->get();
-				return view('index', compact('post'));
+        //
     }
 
     /**
@@ -44,12 +43,11 @@ class PostController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-		 * public function show(Post $post)
      */
-    public function show(Post $post)
+    public function show(Category $category)
     {
-        $post = Post::findOrFail($post);
-				return view('user-layouts.single-post');
+        $category = Category::findOrFail($category);
+				return view('user-layouts.category-section');
     }
 
     /**

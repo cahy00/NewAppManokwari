@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,12 @@ use App\Http\Controllers\PostController;
 */
 
 
-
+//!route postingan untuk user
 Route::get('/', [PostController::class, 'index']);
-Route::get('/post/show/{id}', [PostController::class, 'show']);
+Route::get('/post/show/{Post:slug}', [PostController::class, 'show']);
+
+//?route category untuk user
+Route::get('/category/show/{Category:slug}', [CategoryController::class, 'show']);
 
 // Route::get('/test', function(){
 // 	return view('user-layouts.single-post');
