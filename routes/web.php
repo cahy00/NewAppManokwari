@@ -17,3 +17,8 @@ use App\Http\Controllers\PostController;
 
 
 Route::get('/', [PostController::class, 'index']);
+Route::get('/post/show/{id}', [PostController::class, 'show']);
+
+// Route::get('/test', function(){
+// 	return view('user-layouts.single-post');
+// });
