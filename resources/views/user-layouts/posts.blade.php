@@ -12,10 +12,10 @@
 					<span class="date">Culture</span>
 					<span class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
 				</div>
+				@foreach ($post as $p)
+						
 				<h2>
-					<a href="single-post.html"
-						>11 Work From Home Part-Time Jobs You Can Do Now</a
-					>
+					<a href="single-post.html">{{$p->title}}</a>
 				</h2>
 				<p class="mb-4 d-block">
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
@@ -26,6 +26,7 @@
 					architecto rerum animi atque eveniet, quo, praesentium
 					dignissimos
 				</p>
+				@endforeach
 
 				<div class="d-flex align-items-center author">
 					<div class="photo">
