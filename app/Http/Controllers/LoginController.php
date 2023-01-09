@@ -47,7 +47,7 @@ class LoginController extends Controller
 
 				$user = User::create($validateData);
 				// $request->session()->flash('success', 'Register Success, Pleas Login');
-        return redirect('/login')->with('success', 'Register Success, Pleas Login');
+        return redirect('/login')->with('success', 'Register Success, Please Login');
     }
 
     /**

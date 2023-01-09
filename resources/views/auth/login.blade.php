@@ -43,12 +43,12 @@
                       <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                     </div>
 										@if (session('success'))
-										<div class="alert alert-success alert-dismissible fade show" role="alert">
+										<div class="alert alert-primary" role="alert">
 											{{session('success')}}
-											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 										</div>
 										@endif
-                    <form class="user">
+                    <form class="user" action="/login" method="POST">
+											@csrf
                       <div class="form-group">
                         <input
                           type="email"
@@ -56,6 +56,9 @@
                           id="exampleInputEmail"
                           aria-describedby="emailHelp"
                           placeholder="Enter Email Address..."
+													name="email"
+													autofocus
+													required
                         />
                       </div>
                       <div class="form-group">
@@ -64,9 +67,11 @@
                           class="form-control form-control-user"
                           id="exampleInputPassword"
                           placeholder="Password"
+													name="password"
+													required
                         />
                       </div>
-                      <div class="form-group">
+                      {{-- <div class="form-group">
                         <div class="custom-control custom-checkbox small">
                           <input
                             type="checkbox"
@@ -77,13 +82,13 @@
                             >Remember Me</label
                           >
                         </div>
-                      </div>
-                      <a
-                        href="index.html"
+                      </div> --}}
+                      <button
+                        type="submit"
                         class="btn btn-primary btn-user btn-block"
                       >
                         Login
-                      </a>
+                      </button>
                       <hr />
                       <a
                         href="index.html"
