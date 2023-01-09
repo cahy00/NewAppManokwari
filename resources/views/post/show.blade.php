@@ -30,7 +30,7 @@
 										</tr>
 										<tr>
 											<td>Body</td>
-											<td>{{$post->body}}</td>
+											<td>{!!$post->body!!}</td>
 										</tr>
 										<tr>
 											<td>Published at</td>

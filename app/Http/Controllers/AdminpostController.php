@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
+use Illuminate\Support\Str;
+
 
 
 class AdminpostController extends Controller
@@ -40,7 +42,16 @@ class AdminpostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = Post::create([
+					'title' => $request->title,
+					'slug' => Str::slug($request->title),
+					'category_id' => $request->category_id,
+					'body' => $request->body,
+					'user_id' => auth()->user()->id,
+					'excerpt' => Str::limit(strip_tags($request->body, '50'))
+				]);
+
+				return 'berhasil coyy';
     }
 
     /**

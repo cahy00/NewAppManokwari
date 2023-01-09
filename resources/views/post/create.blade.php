@@ -7,19 +7,14 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-12">
 			<div class="p-5">
 				@if (session('success'))
 				<div class="alert alert-primary" role="alert">
 					{{session('success')}}
 				</div>
 				@endif
-				@if (session('loginError'))
-				<div class="alert alert-danger" role="alert">
-					{{session('loginError')}}
-				</div>
-				@endif
-				<form class="user" action="/login" method="POST">
+				<form class="user" action="/admin/post" method="POST" enctype="multipart/form-data">
 					@csrf
 					<div class="form-group">
 						<label for="">Title</label>
@@ -28,11 +23,11 @@
 							class="form-control"
 							id="exampleInputEmail"
 							aria-describedby="emailHelp"
-							name="email"
+							name="title"
 							autofocus
 							required
 						/>
-					</div>
+					{{-- </div>
 					<div class="form-group">
 						<label for="">Slug</label>
 						<input
@@ -42,19 +37,22 @@
 							name="password"
 							required
 						/>
-					</div>
+					</div> --}}
 					<div class="form-group">
 						<label for="">Category</label>
-						<select name="" id="" class="form-control">
+						<select name="category_id" id="" class="form-control">
 							@foreach ($category as $item)
 								<option value="{{$item->id}}">{{$item->name}}</option>
 							@endforeach
 						</select>
 					</div>
+					<div class="form-group">
+						<textarea class="ckeditor form-control" name="body"></textarea>
+				</div>
 					<button
 						type="submit"
 						class="btn btn-primary btn-user btn-block">
-						Login
+						Submit
 					</button>
 					<hr />
 				</form>
@@ -65,3 +63,7 @@
 </div>
 </div>
 @endsection
+
+@push('script')
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+@endpush

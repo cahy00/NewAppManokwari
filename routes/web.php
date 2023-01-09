@@ -44,6 +44,7 @@ Route::get('/dashboard', function(){
 Route::get('/admin/post', [AdminpostController::class, 'index']);
 Route::get('/admin/post/show/{id}', [AdminpostController::class, 'show']);
 Route::get('/admin/create', [AdminpostController::class, 'create']);
+Route::post('/admin/post', [AdminpostController::class, 'store']);
 // Route::get('/admin/post/show/{Post:slug}', [PostController::class, 'show']);
 
 
