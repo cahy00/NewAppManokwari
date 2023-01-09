@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,11 @@ Route::get('/post/show/{Post:slug}', [PostController::class, 'show']);
 
 //?route category untuk user
 Route::get('/category/show/{Category:slug}', [CategoryController::class, 'show']);
+
+//?route login 
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/register', [LoginController::class, 'create']);
+Route::post('/register', [LoginController::class, 'store']);
 
 // Route::get('/test', function(){
 // 	return view('user-layouts.single-post');
