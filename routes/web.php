@@ -26,15 +26,27 @@ Route::get('/post/show/{Post:slug}', [PostController::class, 'show']);
 Route::get('/category/show/{Category:slug}', [CategoryController::class, 'show']);
 
 //?route login 
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [LoginController::class, 'create']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/register', [LoginController::class, 'store']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
 
 //?Route Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', function(){
+	return view('dashboard.index');
+});
 
 
+
+
+//?Route group
+Route::middleware(['auth'])->group(function(){
+	
+	
+
+});
 // Route::get('/test', function(){
 // 	return view('user-layouts.single-post');
 // });

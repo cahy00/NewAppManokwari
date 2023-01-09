@@ -36,7 +36,7 @@
       rel="stylesheet"
     />
     <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet" />
-
+		
     <!-- Template Main CSS Files -->
     <link href="{{asset('assets/css/variables.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/main.css')}}" rel="stylesheet" />
@@ -104,7 +104,7 @@
     <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
     <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
     <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
-
+		
     <!-- Template Main JS File -->
     <script src="{{asset('assets/js/main.js')}}"></script>
   </body>

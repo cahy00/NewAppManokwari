@@ -30,7 +30,7 @@ class LoginController extends Controller
 
 				if(Auth::attempt($credential)){
 					$request->session()->regenerate();
-					return redirect()->intended('/dashboard');
+					return redirect('/dashboard');
 				}
 				
 				return back()->with('loginError', 'Login Failed');
@@ -67,6 +67,15 @@ class LoginController extends Controller
 				// $request->session()->flash('success', 'Register Success, Pleas Login');
         return redirect('/login')->with('success', 'Register Success, Please Login');
     }
+
+		public function logout(Request $request)
+		{
+				Auth::logout();
+
+				$request->session()->invalidate();
+				$request->session()->regenerateToken();
+				return redirect('/login');
+		}
 
     /**
      * Display the specified resource.
