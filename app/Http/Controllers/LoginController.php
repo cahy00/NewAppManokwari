@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -17,6 +18,23 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
+
+		public function authenticate(Request $request)
+		{
+
+				$credential = $request->validate([
+					'email' 	 => 'required|email:dns',
+					'password' => 'required'
+				]);
+				// dd('Berhasil');
+
+				if(Auth::attempt($credential)){
+					$request->session()->regenerate();
+					return redirect()->intended('/dashboard');
+				}
+				
+				return back()->with('loginError', 'Login Failed');
+		}
 
     /**
      * Show the form for creating a new resource.

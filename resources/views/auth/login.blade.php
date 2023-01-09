@@ -47,6 +47,11 @@
 											{{session('success')}}
 										</div>
 										@endif
+										@if (session('loginError'))
+										<div class="alert alert-danger" role="alert">
+											{{session('loginError')}}
+										</div>
+										@endif
                     <form class="user" action="/login" method="POST">
 											@csrf
                       <div class="form-group">
