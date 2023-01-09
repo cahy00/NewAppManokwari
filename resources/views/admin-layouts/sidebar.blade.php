@@ -36,7 +36,7 @@
 			<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 							<h6 class="collapse-header">Login Screens:</h6>
-							<a class="collapse-item" href="/post">Postingan Berita</a>
+							<a class="collapse-item" href="/admin/post">Postingan Berita</a>
 					</div>
 			</div>
 	</li>

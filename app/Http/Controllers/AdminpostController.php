@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Category;
 
-class PostController extends Controller
+
+class AdminpostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-
-        // $post = Post::with(['category'])->get();
-        // $post = Post::skip(0)->take(3)->get();
-        $post = Post::orderBy('title', 'ASC')->limit(3)->get();
-				return view('index', compact('post'));
+				// $post = Post::where('user_id', auth()->user()->id)->get();
+				$post = Post::with(['category', 'user'])->get();
+        return view('post.index', compact('post'));
     }
 
     /**
@@ -28,7 +28,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+				$category = Category::all();
+        return view('post.create', compact('category'));
     }
 
     /**
@@ -47,12 +48,11 @@ class PostController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-		 * public function show(Post $post)
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        $post = Post::findOrFail($post);
-				return view('user-layouts.single-post');
+        $post = Post::findOrFail($id);
+				return view('post.show', compact('post'));
     }
 
     /**
