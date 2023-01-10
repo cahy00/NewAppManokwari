@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminpostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use Illuminate\Auth\Middleware\Authenticate;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,29 +31,29 @@ Route::get('/category/show/{id}', [CategoryController::class, 'show']);
 //?route login 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [LoginController::class, 'create']);
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/register', [LoginController::class, 'store']);
-Route::post('/logout', [LoginController::class, 'logout']);
 
 
 
-//?Route Dashboard
-Route::get('/dashboard', function(){
-	return view('dashboard.index');
-});
-
-//!route postingan untuk admin
-Route::get('/admin/post', [AdminpostController::class, 'index']);
-Route::get('/admin/post/show/{id}', [AdminpostController::class, 'show']);
-Route::get('/admin/create', [AdminpostController::class, 'create']);
-Route::post('/admin/post', [AdminpostController::class, 'store']);
-// Route::get('/admin/post/show/{Post:slug}', [PostController::class, 'show']);
 
 
 
 //?Route group
 Route::middleware(['auth'])->group(function(){
-	
+	//?Route Dashboard
+	Route::get('/dashboard', function(){
+		return view('dashboard.index');
+	});
+	Route::post('/logout', [LoginController::class, 'logout']);
+	Route::post('/login', [LoginController::class, 'authenticate']);
+	Route::post('/register', [LoginController::class, 'store']);
+
+	//!route postingan untuk admin
+	Route::get('/admin/post', [AdminpostController::class, 'index']);
+	Route::get('/admin/post/show/{id}', [AdminpostController::class, 'show']);
+	Route::get('/admin/create', [AdminpostController::class, 'create']);
+	Route::post('/admin/post', [AdminpostController::class, 'store']);
+	// Route::get('/admin/post/show/{Post:slug}', [PostController::class, 'show']);
+
 	
 
 });
