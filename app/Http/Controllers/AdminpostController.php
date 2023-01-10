@@ -42,16 +42,33 @@ class AdminpostController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Post::create([
-					'title' => $request->title,
-					'slug' => Str::slug($request->title),
-					'category_id' => $request->category_id,
-					'body' => $request->body,
-					'user_id' => auth()->user()->id,
-					'excerpt' => Str::limit(strip_tags($request->body, '50'))
+				$validate = $request->validate([
+					'title' => 'required',
+					'body' => 'required',
+					'category_id' => 'required',
+					'thumbnail' => 'image|file|max:1024'
 				]);
 
-				return 'berhasil coyy';
+				$validate['slug'] = Str::slug($request->title);
+				$validate['user_id'] = auth()->user()->id;
+				$validate['excerpt'] = Str::limit(strip_tags($request->body, '50'));
+
+				if($request->file('thumbnail')){
+					$validate['thumbnail'] = $request->file('thumbnail')->store('post-thumbnail');
+				}
+				// dd($validate);
+				Post::create($validate);
+
+        // $post = Post::create([
+				// 	'title' => $request->title,
+				// 	'slug' => Str::slug($request->title),
+				// 	'category_id' => $request->category_id,
+				// 	'body' => $request->body,
+				// 	'user_id' => auth()->user()->id,
+				// 	'excerpt' => Str::limit(strip_tags($request->body, '50'))
+				// ]);
+
+				return redirect('/admin/post')->with('success', 'Data Berhasil di upload');
     }
 
     /**

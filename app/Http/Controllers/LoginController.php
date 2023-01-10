@@ -30,7 +30,7 @@ class LoginController extends Controller
 
 				if(Auth::attempt($credential)){
 					$request->session()->regenerate();
-					return redirect('/dashboard');
+					return redirect()->intended('/dashboard');
 				}
 				
 				return back()->with('loginError', 'Login Failed');

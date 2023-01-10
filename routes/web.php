@@ -24,7 +24,7 @@ Route::get('/', [PostController::class, 'index']);
 Route::get('/post/show/{Post:slug}', [PostController::class, 'show']);
 
 //?route category untuk user
-Route::get('/category/show/{Category:slug}', [CategoryController::class, 'show']);
+Route::get('/category/show/{id}', [CategoryController::class, 'show']);
 
 //?route login 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

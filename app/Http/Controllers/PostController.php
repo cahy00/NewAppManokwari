@@ -18,7 +18,8 @@ class PostController extends Controller
         // $post = Post::with(['category'])->get();
         // $post = Post::skip(0)->take(3)->get();
         $post = Post::orderBy('title', 'ASC')->limit(3)->get();
-				return view('index', compact('post'));
+				$sidepost = Post::orderBy('created_at', 'DESC')->limit(1)->get();
+				return view('index', compact('post', 'sidepost'));
     }
 
     /**
@@ -49,10 +50,10 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
 		 * public function show(Post $post)
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        $post = Post::findOrFail($post);
-				return view('user-layouts.single-post');
+        $post = Post::findOrFail($id);
+				return view('user-layouts.single-post', compact('post'));
     }
 
     /**

@@ -15,19 +15,18 @@
 						src="assets/img/post-landscape-1.jpg"
 						alt=""
 						class="img-fluid"/></a>
-				@foreach ($post as $p)
+				@foreach ($sidepost as $sp)
 				<div class="post-meta">
-					<span class="date"><a href="/category/show/{{$p->category->slug}}">{{$p->category->name}}</a></span>
-					<span class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+					<span class="date"><a href="/category/show/{{$sp->category->slug}}">{{$sp->category->name}}</a></span>
+					<span class="mx-1">&bullet;</span> <span>{{$sp->created_at->format('M d.Y')}}</span>
 				</div>
 						
 				<h2>
-					<a href="/post/show/{{$p->slug}}">{{$p->title}}</a>
+					<a href="/post/show/{{$sp->id}}">{{$sp->title}}</a>
 				</h2>
 				<p class="mb-4 d-block">
-					{!! $p->excerpt !!}
+					{!! $sp->excerpt !!}
 				</p>
-				@endforeach
 
 				<div class="d-flex align-items-center author">
 					<div class="photo">
@@ -38,9 +37,11 @@
 						/>
 					</div>
 					<div class="name">
-						<h3 class="m-0 p-0">Cameron Williamson</h3>
+						<h3 class="m-0 p-0">{{$sp->user->name}}</h3>
 					</div>
 				</div>
+				@endforeach
+
 			</div>
 		</div>
 

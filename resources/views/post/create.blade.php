@@ -27,17 +27,6 @@
 							autofocus
 							required
 						/>
-					{{-- </div>
-					<div class="form-group">
-						<label for="">Slug</label>
-						<input
-							type="text"
-							class="form-control"
-							id="exampleInputPassword"
-							name="password"
-							required
-						/>
-					</div> --}}
 					<div class="form-group">
 						<label for="">Category</label>
 						<select name="category_id" id="" class="form-control">
@@ -47,6 +36,11 @@
 						</select>
 					</div>
 					<div class="form-group">
+						<label for="formFile" class="form-label">Thumbnail</label>
+						<input class="form-control" type="file" id="formFile" name="thumbnail">
+					</div>
+					<div class="form-group">
+						<label for="">Body Post</label>
 						<textarea class="ckeditor form-control" name="body"></textarea>
 				</div>
 					<button
