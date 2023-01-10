@@ -33,6 +33,10 @@
 											<td>{{$post->user->name}}</td>
 										</tr>
 										<tr>
+											<td>Thumbnail</td>
+											<td><img src="{{asset($post->thumbnail)}}" alt="" class="img-thumbnail" width="50%" height="auto"></td>
+										</tr>
+										<tr>
 											<td>Body</td>
 											<td>{!!$post->body!!}</td>
 										</tr>
