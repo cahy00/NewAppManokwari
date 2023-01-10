@@ -22,15 +22,20 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body style="
+background-image: url('https://source.unsplash.com/1980x1080/?government');
+background-size: cover;
+position: relative;">
 
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
+            <div class="card-body p-0" style="background-image:url('{{asset('assets/bkn/bkn_mkw.png')}}');
+						background-size: cover;
+						position: relative;">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 d-none d-lg-block"></div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">

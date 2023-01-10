@@ -27,7 +27,10 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gradient-primary">
+  <body style="
+		background-image: url('https://source.unsplash.com/1980x1080/?government');
+		background-size: cover;
+    position: relative;">
     <div class="container">
       <!-- Outer Row -->
       <div class="row justify-content-center">
@@ -35,8 +38,11 @@
           <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
               <!-- Nested Row within Card Body -->
-              <div class="row">
-                <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="row" style="background-image:url('{{asset('assets/bkn/bkn_mkw.png')}}');
+							background-size: cover;
+							position: relative;">
+                <div class="col-lg-6 d-none d-lg-block" 
+								></div>
                 <div class="col-lg-6">
                   <div class="p-5">
                     <div class="text-center">
