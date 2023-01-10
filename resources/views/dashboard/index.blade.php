@@ -1,4 +1,9 @@
 @extends('admin-layouts.template')
+
+@section('title')
+		Dashboard - Kantor Regional BKN XIV Manokwari
+@endsection
+
 @section('content')
 <div class="container-fluid">
 

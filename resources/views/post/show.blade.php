@@ -1,5 +1,9 @@
 @extends('admin-layouts.template')
 
+@section('title')
+		Show - Kantor Regional BKN XIV Manokwari
+@endsection
+
 @section('content')
 <div class="container-fluid">
 	<h1 class="h3 mb-2 text-gray-800">Table Postingan</h1>

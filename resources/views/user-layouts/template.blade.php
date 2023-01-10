@@ -10,7 +10,7 @@
 
     <!-- Favicons -->
     {{-- <link href="assets/img/favicon.png" rel="icon" /> --}}
-		<link href="{{asset('bkn/icon-garuda.ico')}}" rel="icon">
+		<link href="{{asset('assets/bkn/icon-garuda.ico')}}" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
