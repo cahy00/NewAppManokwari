@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Str;
+use Storage;
 
 
 
@@ -49,24 +50,42 @@ class AdminpostController extends Controller
 					'thumbnail' => 'image|file|max:1024'
 				]);
 
-				$validate['slug'] = Str::slug($request->title);
-				$validate['user_id'] = auth()->user()->id;
-				$validate['excerpt'] = Str::limit(strip_tags($request->body, '50'));
+				// $validate['slug'] = Str::slug($request->title);
+				// $validate['user_id'] = auth()->user()->id;
+				// $validate['excerpt'] = Str::limit(strip_tags($request->body, '50'));
 
-				if($request->file('thumbnail')){
-					$validate['thumbnail'] = $request->file('thumbnail')->store('post-thumbnail');
+				// if($request->file('thumbnail')){
+				// 	$validate['thumbnail'] = $request->file('thumbnail')->store('post-thumbnail');
+				// }
+				// Post::create($validate);
+
+				if($request->file('thumbnail')->isValid())
+				{
+					$file = $request->file('thumbnail');
+					$name = date('YmdHis');
+					$extension = $file->getClientOriginalExtension();
+					$newName = $name . "." . $extension;
+					$uploads   = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
 				}
-				// dd($validate);
-				Post::create($validate);
-
-        // $post = Post::create([
+				
+				// dd([
 				// 	'title' => $request->title,
 				// 	'slug' => Str::slug($request->title),
 				// 	'category_id' => $request->category_id,
 				// 	'body' => $request->body,
 				// 	'user_id' => auth()->user()->id,
+				// 	'thumbnail' => 'storage/image/'. $newName,
 				// 	'excerpt' => Str::limit(strip_tags($request->body, '50'))
 				// ]);
+        $post = Post::create([
+					'title' => $request->title,
+					'slug' => Str::slug($request->title),
+					'category_id' => $request->category_id,
+					'body' => $request->body,
+					'user_id' => auth()->user()->id,
+					'thumbnail' => 'storage/thumbnail/'. $newName,
+					'excerpt' => Str::limit(strip_tags($request->body, '50'))
+				]);
 
 				return redirect('/admin/post')->with('success', 'Data Berhasil di upload');
     }
