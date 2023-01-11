@@ -34,25 +34,25 @@ Route::get('/register', [LoginController::class, 'create']);
 
 
 
+Route::post('/logout', [LoginController::class, 'logout']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/register', [LoginController::class, 'store']);
+
+//!route postingan untuk admin
 
 
 
 //?Route group
-Route::middleware(['auth'])->group(function(){
+Route::middleware('auth')->group(function(){
 	//?Route Dashboard
 	Route::get('/dashboard', function(){
 		return view('dashboard.index');
 	});
-	Route::post('/logout', [LoginController::class, 'logout']);
-	Route::post('/login', [LoginController::class, 'authenticate']);
-	Route::post('/register', [LoginController::class, 'store']);
-
-	//!route postingan untuk admin
+	// Route::get('/admin/post/show/{Post:slug}', [PostController::class, 'show']);
 	Route::get('/admin/post', [AdminpostController::class, 'index']);
 	Route::get('/admin/post/show/{id}', [AdminpostController::class, 'show']);
 	Route::get('/admin/create', [AdminpostController::class, 'create']);
 	Route::post('/admin/post', [AdminpostController::class, 'store']);
-	// Route::get('/admin/post/show/{Post:slug}', [PostController::class, 'show']);
 
 	
 

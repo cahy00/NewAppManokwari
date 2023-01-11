@@ -50,19 +50,19 @@
 				<div class="col-lg-4 border-start custom-border">
 					@foreach ($post as $p)
 					<div class="post-entry-1">
-						<a href="single-post.html"
+						<a href="/post/show/{{$p->id}}"
 							><img
-								src="assets/img/post-landscape-2.jpg"
+								src="{{asset($p->thumbnail)}}"
 								alt=""
-								class="img-fluid"
+								class="img-fluid" width="200px" height="auto"
 						/></a>
 						<div class="post-meta">
-							<span class="date">{{$p->category->name}}</span>
+							<span class="date"><a href="/category/show/{{$sp->category->id}}">{{$p->category->name}}</a></span>
 							<span class="mx-1">&bullet;</span>
 							<span>Jul 5th '22</span>
 						</div>
 						<h2>
-							<a href="single-post.html">{{$p->title}}</a>
+							<a href="/post/show/{{$p->id}}">{{$p->title}}</a>
 						</h2>
 					</div>
 					@endforeach
@@ -130,55 +130,19 @@
 					<div class="trending">
 						<h3>Trending</h3>
 						<ul class="trending-post">
+							@foreach ($trending as $trending)
 							<li>
-								<a href="single-post.html">
-									<span class="number">1</span>
+								<a href="/post/show/{{$trending->id}}">
+									<span class="number">{{$loop->iteration}}</span>
 									<h3>
-										The Best Homemade Masks for Face (keep the Pimples
-										Away)
+										{{$trending->title}}
 									</h3>
-									<span class="author">Jane Cooper</span>
+									{{-- <span class="author">{{$trending->user->name}}</span> --}}
+									<span class="author">{{$trending->category->name}}</span>
 								</a>
 							</li>
-							<li>
-								<a href="single-post.html">
-									<span class="number">2</span>
-									<h3>
-										17 Pictures of Medium Length Hair in Layers That
-										Will Inspire Your New Haircut
-									</h3>
-									<span class="author">Wade Warren</span>
-								</a>
-							</li>
-							<li>
-								<a href="single-post.html">
-									<span class="number">3</span>
-									<h3>
-										13 Amazing Poems from Shel Silverstein with Valuable
-										Life Lessons
-									</h3>
-									<span class="author">Esther Howard</span>
-								</a>
-							</li>
-							<li>
-								<a href="single-post.html">
-									<span class="number">4</span>
-									<h3>
-										9 Half-up/half-down Hairstyles for Long and Medium
-										Hair
-									</h3>
-									<span class="author">Cameron Williamson</span>
-								</a>
-							</li>
-							<li>
-								<a href="single-post.html">
-									<span class="number">5</span>
-									<h3>
-										Life Insurance And Pregnancy: A Working Mom’s Guide
-									</h3>
-									<span class="author">Jenny Wilson</span>
-								</a>
-							</li>
+							@endforeach
+
 						</ul>
 					</div>
 				</div>

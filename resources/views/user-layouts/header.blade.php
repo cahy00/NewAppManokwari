@@ -12,7 +12,7 @@
 			<li><a href="single-post.html">Profil</a></li>
 			<li class="dropdown">
 				<a href="#"
-					><span>Categories</span>
+					><span>Kategori</span>
 					<i class="bi bi-chevron-down dropdown-indicator"></i
 				></a>
 				<ul>
