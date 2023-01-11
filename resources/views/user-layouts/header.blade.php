@@ -2,9 +2,10 @@
 	<a href="index.html" class="logo d-flex align-items-center">
 		<!-- Uncomment the line below if you also wish to use an image logo -->
 		{{-- <img src="assets/img/logo.png" alt=""> --}}
-		<img src="{{asset('assets/bkn/logobkn.jpeg')}}" alt=""> <img src="assets/bkn/berakhlak.png" alt=""> </a>
-		{{-- <h1><a href="index.html"> </h1> --}}
+		<img src="{{asset('assets/bkn/logobkn.jpeg')}}" alt=""> <img src="assets/bkn/berakhlak.png" alt=""> 
 	</a>
+		{{-- <h1><a href="index.html"> </h1> --}}
+	
 
 	<nav id="navbar" class="navbar">
 		<ul>
@@ -44,9 +45,9 @@
 	<!-- .navbar -->
 
 	<div class="position-relative">
-		<a href="#" class="mx-2"><span class="bi-facebook"></span></a>
-		<a href="#" class="mx-2"><span class="bi-twitter"></span></a>
-		<a href="#" class="mx-2"><span class="bi-instagram"></span></a>
+		{{-- <a href="https://www.facebook.com/kanreg14bknmanokwari" class="mx-2"><span class="bi-facebook"></span></a> --}}
+		{{-- <a href="#" class="mx-2"><span class="bi-twitter"></span></a> --}}
+		{{-- <a href="https://www.instagram.com/bknkanreg14/?hl=id" class="mx-2"><span class="bi-instagram"></span></a> --}}
 
 		<a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
 		{{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
