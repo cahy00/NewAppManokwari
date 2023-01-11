@@ -84,7 +84,7 @@ class AdminpostController extends Controller
 					'body' => $request->body,
 					'user_id' => auth()->user()->id,
 					'thumbnail' => 'storage/thumbnail/'. $newName,
-					'excerpt' => Str::limit(strip_tags($request->body, '50'))
+					'excerpt' => Str::limit(strip_tags($request->body, '150'))
 				]);
 
 				return redirect('/admin/post')->with('success', 'Data Berhasil di upload');

@@ -10,7 +10,7 @@
 	<nav id="navbar" class="navbar">
 		<ul>
 			<li><a href="/">Beranda</a></li>
-			<li><a href="single-post.html">Profil</a></li>
+			<li><a href="/profile">Profil</a></li>
 			<li class="dropdown">
 				<a href="#"
 					><span>Kategori</span>
@@ -38,7 +38,7 @@
 				</ul>
 			</li>
 
-			<li><a href="about.html">Pengumuman</a></li>
+			<li><a href="/announce">Pengumuman</a></li>
 			<li><a href="/contact">Kontak</a></li>
 		</ul>
 	</nav>

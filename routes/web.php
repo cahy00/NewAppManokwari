@@ -30,6 +30,9 @@ Route::get('/category/show/{id}', [CategoryController::class, 'show']);
 Route::get('/contact', function(){
 	return view('user-layouts.contact');
 });
+Route::get('/profile', function(){
+	return view('user-layouts.profile');
+});
 
 //?route login 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
