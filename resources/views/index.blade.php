@@ -101,6 +101,13 @@
 									{{-- <span class="author">{{$trending->user->name}}</span> --}}
 								</a>
 							</li>
+							<li>
+								<a href="/post/show/">
+									<h5>Konsultasi Pelayanan Cepat</h5>
+									<img src="{{asset('assets/bkn/kopace.jpeg')}}" alt="" class="img-fluid">
+								</a>
+							</li>
+
 
 						</ul>
 					</div>

@@ -37,8 +37,21 @@
 					<li><a href="#">Drop Down 4</a></li>
 				</ul>
 			</li>
-
-			<li><a href="/announce">Pengumuman</a></li>
+			<li class="dropdown">
+				<a href="#"
+					><span>Pelayanan</span>
+					<i class="bi bi-chevron-down dropdown-indicator"></i
+				></a>
+				<ul>
+					<li><a href="search-result.html">Standar Pelayanan Publik</a></li>
+					<li><a href="#">Mutasi dan Status Kepegawaian</a></li>
+					<li><a href="#">Pengangkatan dan Pensiun</a></li>
+					<li><a href="#">Informasi Kepegawaian</a></li>
+					<li><a href="#">Pengembangan dan Supervisi Kepegawaian</a></li>
+					<li><a href="#">SSCASN(Sistem Seleksi CPNS Nasional)</a></li>
+				</ul>
+			</li>
+			{{-- <li><a href="/services">Pelayanan</a></li> --}}
 			<li><a href="/contact">Kontak</a></li>
 		</ul>
 	</nav>
