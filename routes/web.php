@@ -27,13 +27,13 @@ Route::get('/post/show/{Post:slug}', [PostController::class, 'show']);
 
 //?route category untuk user
 Route::get('/category/show/{id}', [CategoryController::class, 'show']);
+Route::get('/contact', function(){
+	return view('user-layouts.contact');
+});
 
 //?route login 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [LoginController::class, 'create']);
-
-
-
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/register', [LoginController::class, 'store']);

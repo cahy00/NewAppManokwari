@@ -38,7 +38,7 @@
 			</li>
 
 			<li><a href="about.html">Pengumuman</a></li>
-			<li><a href="contact.html">Kontak</a></li>
+			<li><a href="/contact">Kontak</a></li>
 		</ul>
 	</nav>
 	<!-- .navbar -->
