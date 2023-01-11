@@ -1,4 +1,5 @@
 <div class="container-md" data-aos="fade-in">
+	<h1 style="text-align: center"> <b>KANTOR REGIONAL XIV BADAN KEPEGAWAIAN NEGARA</b></h1>
 	<div class="row">
 		<div class="col-12">
 			<div class="swiper sliderFeaturedPosts">

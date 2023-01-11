@@ -54,7 +54,7 @@
 							><img
 								src="{{asset($p->thumbnail)}}"
 								alt=""
-								class="img-fluid" width="200px" height="auto"
+								class="img-fluid" width="400px" height="auto"
 						/></a>
 						<div class="post-meta">
 							<span class="date"><a href="/category/show/{{$sp->category->id}}">{{$p->category->name}}</a></span>
@@ -68,80 +68,39 @@
 					@endforeach
 				</div>
 				<div class="col-lg-4 border-start custom-border">
+					@foreach ($post as $p)
 					<div class="post-entry-1">
-						<a href="single-post.html"
+						<a href="/post/show/{{$p->id}}"
 							><img
-								src="assets/img/post-landscape-3.jpg"
+								src="{{asset($p->thumbnail)}}"
 								alt=""
-								class="img-fluid"
+								class="img-fluid" width="400px" height="auto"
 						/></a>
 						<div class="post-meta">
-							<span class="date">Business</span>
+							<span class="date"><a href="/category/show/{{$sp->category->id}}">{{$p->category->name}}</a></span>
 							<span class="mx-1">&bullet;</span>
 							<span>Jul 5th '22</span>
 						</div>
 						<h2>
-							<a href="single-post.html"
-								>6 Easy Steps To Create Your Own Cute Merch For
-								Instagram</a
-							>
+							<a href="/post/show/{{$p->id}}">{{$p->title}}</a>
 						</h2>
 					</div>
-					<div class="post-entry-1">
-						<a href="single-post.html"
-							><img
-								src="assets/img/post-landscape-6.jpg"
-								alt=""
-								class="img-fluid"
-						/></a>
-						<div class="post-meta">
-							<span class="date">Tech</span>
-							<span class="mx-1">&bullet;</span>
-							<span>Mar 1st '22</span>
-						</div>
-						<h2>
-							<a href="single-post.html"
-								>10 Life-Changing Hacks Every Working Mom Should Know</a
-							>
-						</h2>
-					</div>
-					<div class="post-entry-1">
-						<a href="single-post.html"
-							><img
-								src="assets/img/post-landscape-8.jpg"
-								alt=""
-								class="img-fluid"
-						/></a>
-						<div class="post-meta">
-							<span class="date">Travel</span>
-							<span class="mx-1">&bullet;</span>
-							<span>Jul 5th '22</span>
-						</div>
-						<h2>
-							<a href="single-post.html"
-								>5 Great Startup Tips for Female Founders</a
-							>
-						</h2>
-					</div>
+					@endforeach
 				</div>
 
 				<!-- Trending Section -->
 				<div class="col-lg-4">
 					<div class="trending">
-						<h3>Trending</h3>
+						<h3 style="text-align: center">Pengumuman</h3>
 						<ul class="trending-post">
-							@foreach ($trending as $trending)
 							<li>
-								<a href="/post/show/{{$trending->id}}">
-									<span class="number">{{$loop->iteration}}</span>
-									<h3>
-										{{$trending->title}}
-									</h3>
+								<a href="/post/show/">
+									{{-- <span class="number">{{$loop->iteration}}</span> --}}
+									<h5>Layanan Pendampingan dan Sosialisasi Kartu ASN Virtual</h5>
+									<img src="{{asset('assets/bkn/kartuasn.jpg')}}" alt="" class="img-fluid">
 									{{-- <span class="author">{{$trending->user->name}}</span> --}}
-									<span class="author">{{$trending->category->name}}</span>
 								</a>
 							</li>
-							@endforeach
 
 						</ul>
 					</div>
