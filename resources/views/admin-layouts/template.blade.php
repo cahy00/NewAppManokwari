@@ -10,7 +10,6 @@
     <meta name="author" content="">
 		<link href="{{asset('assets/bkn/icon-garuda.ico')}}" rel="icon">
 
-
     <title>@yield('title')</title>
 
     <!-- Custom fonts for this template-->

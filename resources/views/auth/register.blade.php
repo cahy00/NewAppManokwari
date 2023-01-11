@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+		<link href="{{asset('assets/bkn/icon-garuda.ico')}}" rel="icon">
 
-    <title>SB Admin 2 - Register</title>
+    <title>Register - Kantor Regional BKN XIV Manokwari</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
