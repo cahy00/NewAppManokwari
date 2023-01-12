@@ -1,5 +1,5 @@
 <div class="container-md" data-aos="fade-in">
-	<h1 style="text-align: center"> <b>KANTOR REGIONAL XIV BADAN KEPEGAWAIAN NEGARA</b></h1>
+	{{-- <h1 style="text-align: center"> <b>KANTOR REGIONAL XIV BADAN KEPEGAWAIAN NEGARA</b></h1> --}}
 	<div class="row">
 		<div class="col-12">
 			<div class="swiper sliderFeaturedPosts">
@@ -7,10 +7,31 @@
 					<div class="swiper-slide">
 						<a
 							href="single-post.html"
+							class="img-bg d-flex align-items-end jumbotron"
+							style="
+								background-image: url('{{asset('assets/bkn/ba.png')}}');
+								background-size: cover;
+								position: relative;"
+						>
+							<div class="img-bg-inner">
+								{{-- <h2>
+									Pelaksanaan Apel Pagi
+								</h2>
+								<p>
+									Senin (09/01/2023), seluruh pegawai Kantor Regional XIV BKN Manokwari 
+									melaksanakan apel pagi pada pukul 08.00 WIT yang bertempat di halaman Kantor Regional XIV BKN dan secara daring melalui 
+									aplikasi Zoom Meeting bagi pegawai UPT BKN Sorong.
+								</p> --}}
+							</div>
+						</a>
+					</div>
+
+					<div class="swiper-slide">
+						<a
+							href="single-post.html"
 							class="img-bg d-flex align-items-end"
 							style="
-								background-image: url('{{asset('assets/bkn/bkn_mkw.png')}}');
-							"
+								background-image: url('{{asset('assets/bkn/bkn_mkw.png')}}');"
 						>
 							<div class="img-bg-inner">
 								<h2>
@@ -25,13 +46,13 @@
 							</div>
 						</a>
 					</div>
-
+					
 					<div class="swiper-slide">
 						<a
 							href="single-post.html"
 							class="img-bg d-flex align-items-end"
 							style="
-								background-image: url('{{asset('assets/bkn/1.png')}}');
+								background-image: url('{{asset('assets/bkn/b.png')}}');
 							"
 						>
 							<div class="img-bg-inner">
@@ -47,15 +68,14 @@
 						</a>
 					</div>
 
+					<div class="custom-swiper-button-next">
+						<span class="bi-chevron-right"></span>
+					</div>
+					<div class="custom-swiper-button-prev">
+						<span class="bi-chevron-left"></span>
+					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<div class="custom-swiper-button-next">
-					<span class="bi-chevron-right"></span>
-				</div>
-				<div class="custom-swiper-button-prev">
-					<span class="bi-chevron-left"></span>
-				</div>
-
-				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</div>

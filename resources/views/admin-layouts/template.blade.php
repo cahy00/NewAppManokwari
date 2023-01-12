@@ -11,6 +11,7 @@
 		<link href="{{asset('assets/bkn/icon-garuda.ico')}}" rel="icon">
 
     <title>@yield('title')</title>
+		@stack('style')
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">

@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminpostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminProfileController;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 
@@ -57,6 +58,7 @@ Route::middleware('auth')->group(function(){
 	Route::get('/admin/create', [AdminpostController::class, 'create']);
 	Route::post('/admin/post', [AdminpostController::class, 'store']);
 
+	Route::get('/admin/create/profile', [AdminProfileController::class, 'create']);
 	
 
 });
