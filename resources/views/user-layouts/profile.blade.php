@@ -16,7 +16,7 @@
 					<img src="{{asset('assets/bkn/bknmkwlama.jpg')}}" alt="" class="img-fluid">
 				</a>
 				<div class="ps-md-5 mt-4 mt-md-0">
-					<h4 class="mb-4 display-4">Company History</h4>
+					<h4 class="mb-4 display-4">Sejarah Kantor</h4>
 					<p style="text-align: justify">
 						Berdirinya Kantor Regional XIV BKN Manokwari 
 						dilatar belakangi oleh faktor geografis dimana jarak daerah-daerah tertentu 
@@ -37,7 +37,7 @@
 					<img src="{{asset('assets/bkn/bkn_mkw.png')}}" alt="" class="img-fluid">
 				</a>
 				<div class="pe-md-5 mt-4 mt-md-0">
-					<h2 class="mb-4 display-4">Mission &amp; Vision</h2>
+					<h2 class="mb-4 display-4"></h2>
 					<p style="text-align: justify">
 						Pada tanggal 28 April 2014 Menpan RB dalam suratnya Nomor : B/1575/M.PANRB/4/2014 
 						menyetujui pembentukan dua Kantor Regional BKN yang baru 
@@ -64,9 +64,41 @@
 		<div class="row justify-content-between align-items-lg-center">
 			<div class="col-lg-5 mb-4 mb-lg-0">
 				<h2 class="display-4 mb-4">Latest News</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, rem eaque vel est asperiores iste pariatur placeat molestias, rerum provident ea maiores debitis eum earum esse quas architecto! Minima, voluptatum! Minus tempora distinctio quo sint est blanditiis voluptate eos. Commodi dolore nesciunt culpa adipisci nemo expedita suscipit autem dolorum rerum?</p>
-				<p>At magni dolore ullam odio sapiente ipsam, numquam eius minus animi inventore alias quam fugit corrupti error iste laboriosam dolorum culpa doloremque eligendi repellat iusto vel impedit odit cum. Sequi atque molestias nesciunt rem eum pariatur quibusdam deleniti saepe eius maiores porro quam, praesentium ipsa deserunt laboriosam adipisci. Optio, animi!</p>
-				<p><a href="#" class="more">View All Blog Posts</a></p>
+				<p style="text-align: justify">
+					Pada tanggal 25 Juli 2014 Badan Kepegawaian Negara 
+					Mengerluarkan Peraturan Kepala BKN Nomor 20 Tahun 2014 
+					tentang Pembentukan Kantor Regional XIII BKN Banda Aceh dan 
+					Kantor Regional XIV BKN Manokwari. Sesaat setelah regulasi 
+					tersebut dikeluarkan, dua pejabat dari Kantor Regional IX BKN 
+					Jayapura yaitu Bapak Sumaryono yang saat itu menjabat sebagai 
+					Kepala Kantor Regional dan Bapak Jaap Tanlain yang saat itu menjabat sebagai 
+					Kepala Sub Bagian Perencanaan dan Keuangan segera mengurus dan membenahi pendirian Kantor 
+					Regional XIV BKN Manokwari. Karena masih bertugas di Kantor Regional IX BKN Jayapura maka Bapak Sumaryono 
+					dan Bapak Jaap Tanlain harus bolak balik Jayapura-Manokwari selama beberapa bulan. Gubernur Papua Barat 
+					menunjuk gedung juang yang berlokasi di komplek Perkantoran Gubernur Bukit Arfai sebagai tempat operasional 
+					Kantor Regional XIV BKN Manokwari. Sejak didirikan tahun 2009 gedung juang tidak pernah 
+					digunakan sehingga kondisinya membutuhkan pembenahan fisik saat akan digunakan di tahun 2014. Bapak Sumaryono dan Bapak Jaap 
+					Tanlain dibantu oleh pegawai-pegawai dari BKD Kabupaten Manokwari selama dua hari untuk membenahi gedung.
+				</p>
+				<p style="text-align: justify">
+					Pada tanggal 3 Desember 2014 Kantor Regional XIV BKN 
+					Manokwari diresmikan oleh Kepala Badan Kepegawaian Negara 
+					yang saat itu dijabat oleh Bapak Eko Sutrisno dan Gubernur 
+					Papua Barat yang saat itu masih dijabat Brigjen TNI Marinir 
+					Abraham Oktavianus Atururi (Almarhum). Acara peresmian kantor 
+					dirangkaikan dengan acara pelantikan beberapa Pejabat Eselon III 
+					dan Eselon IV yang akan bertugas di Kantor Regional XIV BKN Manokwari. 
+					Untuk memenuhi kebutuhan pegawai secara bertahap dilakukan mutasi pegawai 
+					dari Kantor Regional IV BKN Makassar, Kantor Regional VIII Banjarmasin, 
+					Kantor Regional IX Jayapura, dan Kantor Regional X 
+					Denpasar ke Kantor Regional XIV BKN Manokwari.
+				</p>
+				<p style="text-align: justify">
+					Kantor Regional XIV BKN Manokwari 
+					beroperasi efektif pada Bulan Maret 2015 
+					melayani 14 Instansi Daerah yang 
+					terdiri dari 12 Kabupaten, 1 Kota, dan 1 Provinsi.
+				</p>
 			</div>
 			<div class="col-lg-6">
 				<div class="row">
