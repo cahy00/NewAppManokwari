@@ -14,6 +14,20 @@
 						<img src="{{asset($post->thumbnail)}}" alt="" class="img-fluid img-thumbnail">
 						{{-- <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption> --}}
 					</picture>
+					<br><hr>
+					<div class="d-flex align-items-center author">
+						<div class="photo">
+							<img
+								src="{{asset('assets/img/person-1.jpg')}}"
+								alt=""
+								class="img-fluid"
+							/>
+						</div>
+						<div class="name">
+							<h3 class="m-0 p-0">{{$post->user->name}}</h3>
+						</div>
+					</div>
+					<hr>
 					<p style="text-align: justify">{!!$post->body!!}</p>
 				</div><!-- End Single Post Content -->
 				<!-- ======= Comments ======= -->
