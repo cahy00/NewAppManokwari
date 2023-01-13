@@ -63,7 +63,6 @@
 	<div class="container" data-aos="fade-up">
 		<div class="row justify-content-between align-items-lg-center">
 			<div class="col-lg-5 mb-4 mb-lg-0">
-				<h2 class="display-4 mb-4">Latest News</h2>
 				<p style="text-align: justify">
 					Pada tanggal 25 Juli 2014 Badan Kepegawaian Negara 
 					Mengerluarkan Peraturan Kepala BKN Nomor 20 Tahun 2014 

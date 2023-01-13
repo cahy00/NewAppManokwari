@@ -68,7 +68,7 @@
 					@endforeach
 				</div>
 				<div class="col-lg-4 border-start custom-border">
-					@foreach ($post as $p)
+					@foreach ($postcuy as $p)
 					<div class="post-entry-1">
 						<a href="/post/show/{{$p->id}}"
 							><img
