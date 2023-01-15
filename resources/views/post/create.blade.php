@@ -4,6 +4,11 @@
 		Create - Kantor Regional BKN XIV Manokwari
 @endsection
 
+@push('style')
+<script src="//cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
+		
+@endpush
+
 @section('content')
 <div class="container-fluid">
 	<h1 class="h3 mb-2 text-gray-800">Table Postingan</h1>
@@ -45,8 +50,9 @@
 						</div>
 						<div class="form-group">
 							<label for="">Body Post</label>
-							<textarea class="ckeditor form-control" name="body"></textarea>
+							<textarea class="form-control" name="body"></textarea>
 					</div>
+					{{-- <textarea name="editor1"></textarea> --}}
 						<button
 							type="submit"
 							class="btn btn-primary btn-user btn-block">
@@ -63,5 +69,17 @@
 @endsection
 
 @push('script')
-<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script>
+	CKEDITOR.replace('body',{
+		filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+    filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+    filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+    filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
+	});
+</script>
+{{-- <script>
+	var editor = CKEDITOR.replace( 'body' );
+	CKFinder.setupCKEditor( editor );
+</script> --}}
+{{-- <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> --}}
 @endpush

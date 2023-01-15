@@ -59,6 +59,7 @@ Route::middleware('auth')->group(function(){
 	Route::post('/admin/post', [AdminpostController::class, 'store']);
 
 	Route::get('/admin/create/profile', [AdminProfileController::class, 'create']);
+	Route::get('/admin/create/test', [AdminProfileController::class, 'test']);
 	
 
 });
