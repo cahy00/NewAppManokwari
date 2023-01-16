@@ -54,14 +54,13 @@
 
 						<!-- Popular -->
 						<div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
-							@foreach ($post as $item)
-									
+							@foreach ($allpost as $allpost)
+								<div class="post-entry-1 border-bottom">
+									<div class="post-meta"><span class="date">{{$allpost->category->name}}</span> <span class="mx-1">&bullet;</span> <span>{{$allpost->created_at->format('M  d . Y')}}</span></div>
+									<h2 class="mb-2"><a href="/post/show/{{$allpost->id}}">{{$allpost->title}}</a></h2>
+									<span class="author mb-3 d-block">{{$allpost->user->name}}</span>
+								</div>
 							@endforeach
-							<div class="post-entry-1 border-bottom">
-								<div class="post-meta"><span class="date">Sport</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-								<h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
-								<span class="author mb-3 d-block">Jenny Wilson</span>
-							</div>
 						</div> <!-- End Popular -->
 
 					</div>
@@ -70,10 +69,7 @@
 				<div class="aside-block">
 					<h3 class="aside-title">Video</h3>
 					<div class="video-post">
-						<a href="https://www.youtube.com/watch?v=AiFfDjmd0jU" class="glightbox link-video">
-							<span class="bi-play-fill"></span>
-							<img src="assets/img/post-landscape-5.jpg" alt="" class="img-fluid">
-						</a>
+						<iframe class="video-post" src="https://www.youtube.com/embed/xNxRsR2bVJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 				</div><!-- End Video -->
 

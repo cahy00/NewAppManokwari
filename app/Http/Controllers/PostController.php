@@ -61,7 +61,8 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
 				$category = Category::all();
-				return view('user-layouts.single-post', compact('post', 'category'));
+				$allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
+				return view('user-layouts.single-post', compact('post', 'category', 'allpost'));
     }
 
     /**
