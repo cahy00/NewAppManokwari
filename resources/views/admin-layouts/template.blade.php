@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 		<link href="{{asset('assets/bkn/icon-garuda.ico')}}" rel="icon">
+	<link rel="stylesheet" href="{{asset('vendor/summernote/summernote.min.css')}}">
 
     <title>@yield('title')</title>
 		@stack('style')
@@ -99,6 +100,7 @@
 		<!-- Page level plugins -->
 		<script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
 		<script src="{{asset('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+		<script src="{{asset('vendor/summernote/summernote.min.js')}}"></script>
 
 		<!-- Page level custom scripts -->
 		<script src="{{asset('js/demo/datatables-demo.js')}}"></script>

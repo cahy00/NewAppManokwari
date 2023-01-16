@@ -26,10 +26,6 @@ class AdminProfileController extends Controller
         return view('admin-profile.create');
     }
 
-		public function test()
-    {
-        return view('admin-profile.test');
-    }
 
     /**
      * Store a newly created resource in storage.
