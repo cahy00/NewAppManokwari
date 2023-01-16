@@ -7,7 +7,8 @@ use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Storage;
-
+use Path\To\DOMDocument;
+use Intervention\Image\ImageManagerStatic as Image;
 
 
 class AdminpostController extends Controller
@@ -67,6 +68,31 @@ class AdminpostController extends Controller
 					$newName = $name . "." . $extension;
 					$uploads   = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
 				}
+
+				$storage="storage/content";
+				$dom = new \DOMDocument();
+				libxml_use_internal_errors(true);
+				$dom->loadHTML($request->body, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+				libxml_clear_errors();
+				$images = $dom->getElementsByTagName('img');
+				foreach($images as $img){
+					$src = $img->getAttribute('src');
+					if(preg_match('/data:image/', $src)){
+						preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+						$mimetype = $groups['mime'];
+						$fileNameContent = uniqid();
+						$fileNameContentRand = substr(md5($fileNameContent),6,6).'_' . time();
+						$filePath = ("$storage/$fileNameContentRand.$mimetype");
+						$image = Image::make($src)
+						->resize(1200,1200)
+						->encode($mimetype,100)
+						->save(public_path($filePath));
+						$new_src = asset($filePath);
+						$img->removeAttribute('src');
+						$img->setAttribute('src', $new_src);
+						$img->setAttribute('class', 'img-fluid');
+					}
+				}
 				
 				// dd([
 				// 	'title' => $request->title,
@@ -81,7 +107,7 @@ class AdminpostController extends Controller
 					'title' => $request->title,
 					'slug' => Str::slug($request->title),
 					'category_id' => $request->category_id,
-					'body' => $request->body,
+					'body' => $dom->saveHTML(),
 					'user_id' => auth()->user()->id,
 					'thumbnail' => 'storage/thumbnail/'. $newName,
 					'excerpt' => Str::limit(strip_tags($request->body, '150'))

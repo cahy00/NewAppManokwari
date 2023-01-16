@@ -96,6 +96,22 @@
     });
 </script>
 {{-- <script>
+	$('#summernote').summernote({
+  toolbar: [
+    // [groupName, [list of button]]
+    ['style', ['bold', 'italic', 'underline', 'clear']],
+    ['font', ['strikethrough', 'superscript', 'subscript']],
+    ['fontsize', ['fontsize']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+		['insert', ['link', 'picture', 'video']],
+    ['height', ['height']]
+  ],
+	height:400,
+	popatmouse:true
+});
+</script> --}}
+{{-- <script>
 	CKEDITOR.replace('body',{
 		filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
     filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
