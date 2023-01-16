@@ -1,5 +1,10 @@
 @extends('user-layouts.template')
 
+@push('style')
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0" nonce="oZsVg1KS"></script>
+@endpush
+
 @section('posts')
 <section class="single-post-content">
 	<div class="container">
@@ -25,6 +30,7 @@
 						</div>
 						<div class="name">
 							<h3 class="m-0 p-0">{{$post->user->name}}</h3>
+							<div class="fb-share-button" data-href="http://localhost:8000/post/show/13" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A8000%2Fpost%2Fshow%2F13&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"> <img src="{{asset('assets/bkn/fb.png')}}" alt=""> Bagikan</a></div>
 						</div>
 					</div>
 					<hr>
