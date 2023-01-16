@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Carbon\Carbon;
+use App\Models\Category;
 
 class PostController extends Controller
 {
@@ -59,7 +60,8 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::findOrFail($id);
-				return view('user-layouts.single-post', compact('post'));
+				$category = Category::all();
+				return view('user-layouts.single-post', compact('post', 'category'));
     }
 
     /**

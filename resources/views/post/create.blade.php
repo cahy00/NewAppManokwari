@@ -92,9 +92,10 @@
 <script src="{{asset('vendor/summernote/summernote.min.js')}}"></script>
 <script>
 	$(document).ready(function() {
-        $('#summernote').summernote();
+        $('#summernote').summernote('isEmpty');
     });
 </script>
+
 {{-- <script>
 	$('#summernote').summernote({
   toolbar: [
