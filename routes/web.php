@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Auth;
 
 //!route postingan untuk user
 Route::get('/', [PostController::class, 'index']);
-Route::get('/post/show/{id}', [PostController::class, 'show']);
+Route::get('/post/show/{id}/{slug}', [PostController::class, 'show'])->name('post.show');
 
 //?route category untuk user
 Route::get('/category/show/{id}', [CategoryController::class, 'show']);

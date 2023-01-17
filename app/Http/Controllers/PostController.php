@@ -58,7 +58,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
 		 * public function show(Post $post)
      */
-    public function show($id)
+    public function show($id, $slug)
     {
         $post = Post::find($id);
 				$category = Category::all();

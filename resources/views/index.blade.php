@@ -22,7 +22,7 @@
 				</div>
 						
 				<h2>
-					<a href="/post/show/{{$sp->id}}">{{$sp->title}}</a>
+					<a href="{{route('post.show', [$sp->id, $sp->slug])}}">{{$sp->title}}</a>
 				</h2>
 				<p class="mb-4 d-block">
 					{!! $sp->excerpt !!}
