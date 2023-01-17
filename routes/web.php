@@ -44,6 +44,10 @@ Route::post('/register', [LoginController::class, 'store']);
 
 //!route postingan untuk admin
 
+Route::get('/test', function(){
+	$post =  Post::findOrFail($hash->decodeHex($id));
+	return view('test');
+});
 
 
 //?Route group
@@ -60,9 +64,7 @@ Route::middleware('auth')->group(function(){
 
 	Route::get('/admin/create/profile', [AdminProfileController::class, 'create']);
 
-	Route::get('/test', function(){
-		return view('test');
-	});
+
 
 });
 // Route::get('/test', function(){
