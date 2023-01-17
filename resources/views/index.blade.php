@@ -22,7 +22,7 @@
 				</div>
 						
 				<h2>
-					<a href="{{route('post.show', [$sp->id, $sp->slug])}}">{{$sp->title}}</a>
+					<a href="{{route('post.show', [$hash->encodeHex($sp->id), $sp->slug])}}">{{$sp->title}}</a>
 				</h2>
 				<p class="mb-4 d-block">
 					{!! $sp->excerpt !!}
@@ -62,7 +62,7 @@
 							<span>Jul 5th '22</span>
 						</div>
 						<h2>
-							<a href="/post/show/{{$p->id}}">{{$p->title}}</a>
+							<a href="{{route('post.show', [$hash->encodeHex($p->id), $p->slug])}}">{{$p->title}}</a>
 						</h2>
 					</div>
 					@endif
