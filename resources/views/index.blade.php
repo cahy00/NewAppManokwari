@@ -48,6 +48,7 @@
 			<div class="row g-5">
 				<div class="col-lg-4 border-start custom-border">
 					@foreach ($post as $p)
+					@if ($p->id % 2 != 0)
 					<div class="post-entry-1">
 						<a href="/post/show/{{$p->id}}"
 							><img
@@ -64,26 +65,30 @@
 							<a href="/post/show/{{$p->id}}">{{$p->title}}</a>
 						</h2>
 					</div>
+					@endif
 					@endforeach
 				</div>
 				<div class="col-lg-4 border-start custom-border">
 					@foreach ($postcuy as $p)
-					<div class="post-entry-1">
-						<a href="/post/show/{{$p->id}}"
-							><img
-								src="{{asset($p->thumbnail)}}"
-								alt=""
-								class="img-fluid" width="400px" height="auto"
-						/></a>
-						<div class="post-meta">
-							<span class="date"><a href="/category/show/{{$p->category->id}}">{{$p->category->name}}</a></span>
-							<span class="mx-1">&bullet;</span>
-							<span>Jul 5th '22</span>
+						@if ($p->id % 2 == 0)
+						<div class="post-entry-1">
+							<a href="/post/show/{{$p->id}}"
+								><img
+									src="{{asset($p->thumbnail)}}"
+									alt=""
+									class="img-fluid" width="400px" height="auto"
+							/></a>
+							<div class="post-meta">
+								<span class="date"><a href="/category/show/{{$p->category->id}}">{{$p->category->name}}</a></span>
+								<span class="mx-1">&bullet;</span>
+								<span>Jul 5th '22</span>
+							</div>
+							<h2>
+								<a href="/post/show/{{$p->id}}">{{$p->title}}</a>
+							</h2>
 						</div>
-						<h2>
-							<a href="/post/show/{{$p->id}}">{{$p->title}}</a>
-						</h2>
-					</div>
+						@endif
+							
 					@endforeach
 				</div>
 

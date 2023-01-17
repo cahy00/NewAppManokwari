@@ -35,8 +35,8 @@
 					</div>
 					<hr>
 					<p style="text-align: justify">{!!$post->body!!}</p>
-				</div><!-- End Single Post Content -->
-				<!-- ======= Comments ======= -->
+				</div>
+				<!-- End Single Post Content -->
 				
 
 			</div>
@@ -77,7 +77,7 @@
 					<h3 class="aside-title">Categories</h3>
 					<ul class="aside-links list-unstyled">
 						@foreach ($category as $item)
-							<li><a href="{{$item->id}}"><i class="bi bi-chevron-right"></i> {{$item->name}}</a></li>
+							<li><a href="/category/show/{{$item->id}}"><i class="bi bi-chevron-right"></i> {{$item->name}}</a></li>
 						@endforeach
 					</ul>
 				</div><!-- End Categories -->

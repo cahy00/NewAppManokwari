@@ -20,11 +20,12 @@ class PostController extends Controller
         // $post = Post::with(['category'])->get();
         // $post = Post::skip(0)->take(3)->get();
         // $post = Post::orderBy('created_at', 'DESC')->limit(3)->get();
-				$sidepost = Post::orderBy('created_at', 'DESC')->limit(1)->get();
-				$postcuy = Post::orderBy('created_at', 'DESC')->limit(3)->get();
+				// $sidepost = Post::where('id' );
+				$sidepost = Post::with('category', 'user')->latest()->limit(1)->get();
+				$postcuy = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
 				// $trending = Post::with('category')->orderBy('title', 'ASC')->limit(5)->get();
 				// $sidepost = Post::with('category', 'user')->whereDay('created_at', date('m'))->limit(1)->get();
-				$post = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(3)->get();
+				$post = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
 				// $postcuy = Post::with('category', 'user')->whereYear('created_at', date('Y'))->limit(3)->get();
 				return view('index', compact('post', 'sidepost', 'postcuy'));
     }
@@ -59,7 +60,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
+        $post = Post::find($id);
 				$category = Category::all();
 				$allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
 				return view('user-layouts.single-post', compact('post', 'category', 'allpost'));
