@@ -1,1 +1,5 @@
-@include('user-layouts.single-post')
+@extends('user-layouts.single-post')
+
+@section('content')
+		test
+@endsection

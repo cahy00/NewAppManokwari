@@ -11,32 +11,8 @@
 		<div class="row">
 			<div class="col-md-9 post-content" data-aos="fade-up">
 
-				<!-- ======= Single Post Content ======= -->
-				<div class="single-post">
-					<div class="post-meta"><span class="date">{{$post->category->name}}</span> <span class="mx-1">&bullet;</span> <span>{{$post->created_at->format('M  d . Y')}}</span></div>
-					<h1 class="mb-5">{{$post->title}}</h1>
-					<picture class="my-4">
-						<img src="{{asset($post->thumbnail)}}" alt="" class="img-fluid img-thumbnail">
-						{{-- <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption> --}}
-					</picture>
-					<br><hr>
-					<div class="d-flex align-items-center author">
-						<div class="photo">
-							<img
-								src="{{asset('assets/img/person-1.jpg')}}"
-								alt=""
-								class="img-fluid"
-							/>
-						</div>
-						<div class="name">
-							<h3 class="m-0 p-0">{{$post->user->name}}</h3>
-							{{-- <div class="fb-share-button" data-href="http://localhost:8000/post/show/13" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A8000%2Fpost%2Fshow%2F13&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"> <img src="{{asset('assets/bkn/fb.png')}}" alt=""> Bagikan</a></div> --}}
-						</div>
-					</div>
-					<hr>
-					<p style="text-align: justify">{!!$post->body!!}</p>
-				</div>
-				<!-- End Single Post Content -->
+
+				@yield('content')
 				
 
 			</div>
@@ -76,8 +52,8 @@
 				<div class="aside-block">
 					<h3 class="aside-title">Categories</h3>
 					<ul class="aside-links list-unstyled">
-						@foreach ($category as $item)
-							<li><a href="/category/show/{{$item->id}}"><i class="bi bi-chevron-right"></i> {{$item->name}}</a></li>
+						@foreach ($category as $category)
+							<li><a href="/category/show/{{$category->id}}"><i class="bi bi-chevron-right"></i> {{$category->name}}</a></li>
 						@endforeach
 					</ul>
 				</div><!-- End Categories -->

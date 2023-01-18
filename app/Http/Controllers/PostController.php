@@ -54,12 +54,20 @@ class PostController extends Controller
      */
     public function show($id, $slug)
     {
-				$hash = new Hashids();
-        $post = Post::findOrFail($hash->decodeHex($id));
+				
 				$category = Category::all();
 				$allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
-				return view('user-layouts.single-post', compact('post', 'category', 'allpost'));
+				return view('user-layouts.single-post', compact('category', 'allpost'));
     }
+
+		public function showPost($id, $slug)
+		{
+				$hash = new Hashids();
+				$allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
+				$category = Category::all();
+				$post = Post::findOrFail($hash->decodeHex($id));
+				return view('user-components.show-post', compact('post', 'category', 'allpost'));
+		}
 
     /**
      * Show the form for editing the specified resource.

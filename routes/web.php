@@ -9,6 +9,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminProfileController;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
+use App\Models\Category;
+use Hashids\Hashids;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +27,8 @@ use Illuminate\Support\Facades\Auth;
 
 //!route postingan untuk user
 Route::get('/', [PostController::class, 'index']);
-Route::get('/post/show/{id}/{slug}', [PostController::class, 'show'])->name('post.show');
+// Route::get('/post/show/{id}/{slug}', [PostController::class, 'show'])->name('post.show');
+Route::get('/post/showPost/{id}/{slug}', [PostController::class, 'showPost'])->name('post.showPost');
 
 //?route category untuk user
 Route::get('/category/show/{id}', [CategoryController::class, 'show']);
@@ -45,10 +49,10 @@ Route::post('/register', [LoginController::class, 'store']);
 //!route postingan untuk admin
 
 Route::get('/test', function(){
-	$post =  Post::findOrFail($hash->decodeHex($id));
-	return view('test');
+	$allpost = Post::all();
+	$category = Category::all();
+	return view('test', compact('allpost', 'category'));
 });
-
 
 //?Route group
 Route::middleware('auth')->group(function(){
