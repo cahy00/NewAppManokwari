@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Post;
+use Hashids\Hashids;
 
 class CategoryController extends Controller
 {
+		public function __construct()
+		{
+			$allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
+			return $allpost;
+		}
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +21,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $category = Category::all();
-				return view('user-components.category-section', compact('category'));
+        $category = Category::with(['post'])->get();
+				$allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
+				return view('user-components.category-section', compact('category', 'allpost'));
     }
 
     /**
@@ -45,10 +53,18 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id, $slug)
     {
-        $category = Category::findOrFail($category);
-				return view('user-layouts.category-section');
+				// $hash = new Hashids();
+				// $category = Category::all();
+        // $categoryShow = Category::findOrFail($hash->decodeHex($id))->get();
+				// $allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
+				// return view('user-components.category-section', compact('categoryShow', 'hash', 'allpost', 'category'));
+
+				// $category = Category::findOrFail(1)->post->title;
+				// $post = Post::first()->category->name;
+				$post = Category::all()->post->title;
+				dd($post);
     }
 
     /**

@@ -17,7 +17,7 @@
 				></a>
 				<ul>
 					<li><a href="#">Kedudukan Tugas dan Fungsi</a></li>
-					<li><a href="#">Visi Misi</a></li>
+					<li><a href="/visi">Visi Misi</a></li>
 					<li><a href="#">Pegawai kantor</a></li>
 					<li><a href="/profile">Sejarah Kantor</a></li>
 					<li class="dropdown">
@@ -41,7 +41,7 @@
 					<i class="bi bi-chevron-down dropdown-indicator"></i
 				></a>
 				<ul>
-					<li><a href="search-result.html">Peraturan</a></li>
+					<li><a href="jdih.bkn.go.id">Peraturan</a></li>
 					<li><a href="#">Galeri Kegiatan</a></li>
 					<li><a href="#">Maklumat Pelayanan</a></li>
 					<li><a href="#">Statistik</a></li>

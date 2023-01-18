@@ -17,7 +17,7 @@
 						alt=""
 						class="card-img-top"/></a>
 				<div class="post-meta">
-					<span class="date"><a href="/category/show/{{$sp->category->slug}}">{{$sp->category->name}}</a></span>
+					<span class="date"><a href="{{route('category.show', [$hash->encodeHex($sp->category->id), $sp->category->slug])}}">{{$sp->category->name}}</a></span>
 					<span class="mx-1">&bullet;</span> <span>{{$sp->created_at->format('M d.Y')}}</span>
 				</div>
 						

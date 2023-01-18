@@ -112,4 +112,102 @@
 		</div>
 	</div>
 </section>
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center mb-5">
+				<h1 class="page-title">Visi Misi</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2 class="display-4">Visi</h2>
+				<p style="text-align: justify">
+					Dalam rangka mengemban amanah mandat Undang-Undang, visi BKN Tahun 2020-2024: 
+					adalah melaksanakan Visi Presiden Nomor 8 (delapan) yaitu “pengelolaan Pemerintahan yang 
+					Bersih Efektif, dan Terpercaya” dengan melaksanakan arahan presiden nomor 4 (empat) yaitu 
+					“Penyederhanaan Birokrasi” dan Agenda pembangunan nomor 7 (tujuh) yaitu “Memperkuat stabilitas 
+					Polhukam dan Transformasi Pelayanan Publik” dengan ”Mewujudkan Pengelola ASN yang Profesional 
+					dan Berintegritas untuk mendukung 
+					tercapainya Indonesia Maju yang berdaulat, mandiri, dan berkepribadian berlandaskan gotong royong”.
+				</p>
+			</div>
+			<div class="col-lg-6">
+				<h2 class="display-4">Misi</h2>
+				<p style="text-align: justify">
+					Dalam rangka mewujudkan Visi tersebut, serta Mengacu pada tugas, fungsi dan wewenang 
+					yang telah dimandatkan oleh peraturan perundang undangan kepada Badan Kepegawaian negara 
+					dan penjabaran dari misi Memberikan kontribusi nyata terhadap pembangunan bidang aparatur sipil 
+					negara melalui pembinaan dan penyelenggaraan manajemen ASN, serta pengembangan sistem informasi ASN berdasarkan sistem merit, 
+					maka terdapat 5 pilar yang menjadi misi Badan Kepegawaian negara yakni meningkatkan kualitas ASN melalui:
+					<ul>
+						<li>Pembinaan penyelenggaraan manajemen ASN</li>
+						<li>Penyelenggaraan manajemen ASN,</li>
+						<li>Penyimpanan informasi pegawai ASN,</li> 
+						<li>Pengawasan Dan Pengendalian Norma, Standar, Prosedur, dan Kriteria Manajemen ASN.dan</li> 
+						<li>Mengembangkan dan mengoptimalkan sistim manajemen internal BKN</li> 
+					</ul>
+				</p>
+			</div>
+		</div>
+		</div>
+	</div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section>
+	<div class="container" data-aos="fade-up">
+		<div class="row">
+			<div class="col-12 text-center mb-5">
+				<div class="row justify-content-center">
+					<div class="col-lg-6">
+						<h2 class="display-4">Profil Pegawai</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 text-center mb-5">
+				<img src="assets/img/person-1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
+				<h4>Cameron Williamson</h4>
+				<span class="d-block mb-3 text-uppercase">Founder &amp; CEO</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+			</div>
+			<div class="col-lg-4 text-center mb-5">
+				<img src="assets/img/person-2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
+				<h4>Wade Warren</h4>
+				<span class="d-block mb-3 text-uppercase">Founder, VP</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+			</div>
+			<div class="col-lg-4 text-center mb-5">
+				<img src="assets/img/person-3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
+				<h4>Jane Cooper</h4>
+				<span class="d-block mb-3 text-uppercase">Editor Staff</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+			</div>
+			<div class="col-lg-4 text-center mb-5">
+				<img src="assets/img/person-4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
+				<h4>Cameron Williamson</h4>
+				<span class="d-block mb-3 text-uppercase">Editor Staff</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+			</div>
+			<div class="col-lg-4 text-center mb-5">
+				<img src="assets/img/person-5.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
+				<h4>Cameron Williamson</h4>
+				<span class="d-block mb-3 text-uppercase">Editor Staff</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+			</div>
+			<div class="col-lg-4 text-center mb-5">
+				<img src="assets/img/person-6.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
+				<h4>Cameron Williamson</h4>
+				<span class="d-block mb-3 text-uppercase">Editor Staff</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 @endsection

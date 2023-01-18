@@ -20,12 +20,18 @@ Route::get('/', [PostController::class, 'index']);
 Route::get('/post/showPost/{id}/{slug}', [PostController::class, 'showPost'])->name('post.showPost');
 
 //?route category untuk user
-Route::get('/category/show/{id}', [CategoryController::class, 'show']);
+Route::get('/category/show/{id}/{slug}', [CategoryController::class, 'show'])->name('category.show');
 Route::get('/contact', function(){
 	return view('user-layouts.contact');
 });
+Route::get('/category', [CategoryController::class, 'index']);
+
 Route::get('/profile', function(){
 	return view('user-layouts.profile');
+});
+
+Route::get('/visi', function(){
+	return view('user-components.visimisi');
 });
 
 //?route login 
