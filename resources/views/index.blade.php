@@ -12,7 +12,7 @@
 		<div class="col-lg-4">
 			<div class="post-entry-1 lg">
 				@foreach ($sidepost as $sp)
-				<a href="single-post.html"><img
+				<a href="{{route('post.showPost', [$hash->encodeHex($sp->id), $sp->slug])}}"><img
 						src="{{asset($sp->thumbnail)}}"
 						alt=""
 						class="card-img-top"/></a>
@@ -52,7 +52,7 @@
 					@foreach ($post as $p)
 					@if ($p->id % 2 != 0)
 					<div class="post-entry-1">
-						<a href="/post/show/{{$p->id}}"
+						<a href="{{route('post.showPost', [$hash->encodeHex($p->id), $p->slug])}}"
 							><img
 								src="{{asset($p->thumbnail)}}"
 								alt=""
@@ -64,7 +64,7 @@
 							<span>Jul 5th '22</span>
 						</div>
 						<h2>
-							<a href="{{route('post.show', [$hash->encodeHex($p->id), $p->slug])}}">{{$p->title}}</a>
+							<a href="{{route('post.showPost', [$hash->encodeHex($p->id), $p->slug])}}">{{$p->title}}</a>
 						</h2>
 					</div>
 					@endif
@@ -76,7 +76,7 @@
 
 
 						<div class="post-entry-1">
-							<a href="/post/show/{{$p->id}}"
+							<a href="{{route('post.showPost', [$hash->encodeHex($p->id), $p->slug])}}"
 								><img
 									src="{{asset($p->thumbnail)}}"
 									alt=""
@@ -88,7 +88,7 @@
 								<span>Jul 5th '22</span>
 							</div>
 							<h2>
-								<a href="{{route('post.show', [$hash->encodeHex($p->id), $p->slug])}}">{{$p->title}}</a>
+								<a href="{{route('post.showPost', [$hash->encodeHex($p->id), $p->slug])}}">{{$p->title}}</a>
 							</h2>
 						</div>
 						@endif
