@@ -55,11 +55,15 @@ Route::middleware('auth')->group(function(){
 	Route::get('/dashboard', function(){
 		return view('dashboard.index');
 	});
+	//? Route Post Admin
 	// Route::get('/admin/post/show/{Post:slug}', [PostController::class, 'show']);
 	Route::get('/admin/post', [AdminpostController::class, 'index']);
 	Route::get('/admin/post/show/{id}', [AdminpostController::class, 'show']);
 	Route::get('/admin/create', [AdminpostController::class, 'create']);
 	Route::post('/admin/post', [AdminpostController::class, 'store']);
+
+	//?Route Post Category
+	Route::get('/admin/category/create', [AdminCategoryController::class, 'create'])->name('category.AdminCategory');
 
 	Route::get('/admin/create/profile', [AdminProfileController::class, 'create']);
 
