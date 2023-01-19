@@ -48,7 +48,8 @@ class AdminpostController extends Controller
 					'title' => 'required',
 					'body' => 'required',
 					'category_id' => 'required',
-					'thumbnail' => 'image|file|max:1024'
+					'thumbnail' => 'image|file|max:1024',
+					'slug' => 'unique:posts'
 				]);
 
 				// $validate['slug'] = Str::slug($request->title);
@@ -103,15 +104,18 @@ class AdminpostController extends Controller
 				// 	'thumbnail' => 'storage/image/'. $newName,
 				// 	'excerpt' => Str::limit(strip_tags($request->body, '50'))
 				// ]);
-        $post = Post::create([
-					'title' => $request->title,
-					'slug' => Str::slug($request->title),
-					'category_id' => $request->category_id,
-					'body' => $dom->saveHTML(),
-					'user_id' => auth()->user()->id,
-					'thumbnail' => 'storage/thumbnail/'. $newName,
-					'excerpt' => Str::limit(strip_tags($request->body, '150'))
-				]);
+				if($validate){
+					$post = Post::create([
+						'title' => $request->title,
+						'slug' => Str::slug($request->title),
+						'category_id' => $request->category_id,
+						'body' => $dom->saveHTML(),
+						'user_id' => auth()->user()->id,
+						'thumbnail' => 'storage/thumbnail/'. $newName,
+						'excerpt' => Str::limit(strip_tags($request->body, '150'))
+					]);
+					
+				}
 
 				return redirect('/admin/post')->with('success', 'Data Berhasil di upload');
     }

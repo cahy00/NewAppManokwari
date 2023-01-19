@@ -1,11 +1,11 @@
 @extends('user-layouts.single-post')
 
 @section('content')
-<div class="single-post">
+<div class="single-post my-4">
 	<div class="post-meta"><span class="date">{{$post->category->name}}</span> <span class="mx-1">&bullet;</span> <span>{{$post->created_at->format('M  d . Y')}}</span></div>
 	<h1 class="mb-5">{{$post->title}}</h1>
 	<picture class="my-4">
-		<img src="{{asset($post->thumbnail)}}" alt="" class="img-fluid img-thumbnail">
+		<img src="{{asset($post->thumbnail)}}" alt="" class="img-fluid">
 	</picture>
 	<br><hr>
 	<div class="d-flex align-items-center author">
