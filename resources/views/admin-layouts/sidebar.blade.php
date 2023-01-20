@@ -37,7 +37,7 @@
 					<div class="bg-white py-2 collapse-inner rounded">
 							<h6 class="collapse-header">Form Screens:</h6>
 							<a class="collapse-item" href="/admin/post">Postingan Berita</a>
-							<a class="collapse-item" href="/admin/category">Kategori</a>
+							<a class="collapse-item" href="/admin/category/create">Kategori</a>
 							<a class="collapse-item" href="/admin/profile">Profil Kantor</a>
 					</div>
 			</div>
