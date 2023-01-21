@@ -45,7 +45,6 @@
 			</div>
 		</div>
 
-
 		<div class="col-lg-8">
 			<div class="row g-5">
 				<div class="col-lg-4 border-start custom-border">
