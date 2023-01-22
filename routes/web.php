@@ -22,7 +22,7 @@ Route::get('/post/showPost/{id}/{slug}', [PostController::class, 'showPost'])->n
 //?route category untuk user
 Route::get('/category/show/{id}/{slug}', [CategoryController::class, 'show'])->name('category.show');
 Route::get('/contact', function(){
-	return view('user-layouts.contact');
+	return view('user-layouts.contact');ds
 });
 Route::get('/category', [CategoryController::class, 'index']);
 
