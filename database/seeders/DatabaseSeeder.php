@@ -28,5 +28,11 @@ class DatabaseSeeder extends Seeder
 					'name' => 'Artikel Kepegawaian',
 					'slug' => 'artikel-kepegawaian'
 				]);
+
+				$user = User::create([
+					'name' => 'Admin14',
+					'email' => 'admin14@gmail.com',
+					'password' => bcrypt('12345678')
+				]);
     }
 }
