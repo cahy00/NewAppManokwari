@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function(){
 	//? Route Post Admin
 	// Route::get('/admin/post/show/{Post:slug}', [PostController::class, 'show']);
 	Route::get('/admin/post', [AdminpostController::class, 'index']);
-	Route::get('/admin/post/show/{id}', [AdminpostController::class, 'show']);dsdssdds
+	Route::get('/admin/post/show/{id}', [AdminpostController::class, 'show']);dsdssddsds
 	Route::get('/admin/create', [AdminpostController::class, 'create']);
 	Route::post('/admin/post', [AdminpostController::class, 'store']);
 
