@@ -58,6 +58,30 @@
 					<hr />
 				</div>
 			</div>
+			<div class="col-lg-6">
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+							<thead>
+									<tr>
+											<th>#</th>
+											<th>Title</th>
+											<th>Action</th>
+									</tr>
+							</thead>
+							<tbody>
+								@foreach ($category as $item)
+									<tr>
+										<td>{{$loop->iteration}}</td>
+										<td>{{$item->name}}</td>
+										<td>Edit</td>
+									</tr>
+								@endforeach
+							</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

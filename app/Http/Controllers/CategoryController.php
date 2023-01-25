@@ -35,7 +35,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.create');
+				$category = Category::orderBy('name', 'ASC')->get();
+        return view('category.create', compact('category'));
     }
 
     /**
