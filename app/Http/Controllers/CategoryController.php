@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
 use Hashids\Hashids;
+use Illuminate\Support\Str;
+
 
 class CategoryController extends Controller
 {
@@ -33,7 +35,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
     }
 
     /**
@@ -44,7 +46,26 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+			try{
+				$validate = $request->validate([
+					'name' => 'required',
+					'slug' => 'uniq:categories'
+				]);
+	
+				$category = Category::create([
+					'name' => $request->name,
+					'slug' => Str::slug($request->name)
+				]);
+
+				return redirect('/admin/category/create')->with('success', 'Data Berhasil ditambahkan');
+
+			}catch(\Exception $e){
+				return redirect('/admin/category/create')->with('error', 'Data Gagal ditambahkan');
+
+			}
+
+
+
     }
 
     /**

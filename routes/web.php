@@ -63,7 +63,8 @@ Route::middleware('auth')->group(function(){
 	Route::post('/admin/post', [AdminpostController::class, 'store']);
 
 	//?Route Post Category
-	Route::get('/admin/category/create', [AdminCategoryController::class, 'create'])->name('category.AdminCategory');
+	Route::get('/admin/category/create', [CategoryController::class, 'create'])->name('category.AdminCategory');
+	Route::post('/admin/category/create', [CategoryController::class, 'store']);
 
 	Route::get('/admin/create/profile', [AdminProfileController::class, 'create']);
 

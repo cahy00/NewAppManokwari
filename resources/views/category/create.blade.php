@@ -16,63 +16,38 @@
 <!-- DataTales Example -->
 	<div class="card shadow mb-4">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-6">
 				<div class="p-5">
 					@if (session('success'))
 					<div class="alert alert-primary" role="alert">
 						{{session('success')}}
 					</div>
 					@endif
-					<form class="user" action="/admin/post" method="POST" enctype="multipart/form-data">
+					@if (session('error'))
+					<div class="alert alert-danger" role="alert">
+						{{session('error')}}
+					</div>
+					@endif
+					<form class="user" action="/admin/category/create" method="POST" enctype="multipart/form-data">
 						@csrf
 						<div class="form-group">
-							<label for="">Title</label>
+							<label for="">Category</label>
 							<input
 								type="text"
-								class="form-control @error('title') is-invalid @enderror"
+								class="form-control @error('name') is-invalid @enderror"
 								id="exampleInputEmail"
-								name="title"
+								name="name"
 								autofocus
 								required
-								value="{{old('title')}}"
-								placeholder="Input Title"
+								value="{{old('name')}}"
+								placeholder="Input Category"
 							/>
-							@error('title')
+							@error('name')
 							<div class="invalid-feedback">
 								{{$message}}
 							</div>
 							@enderror
 						</div>
-						<div class="form-group">
-							<label for="">Category</label>
-							<select name="category_id" id="" class="form-control">
-								@foreach ($category as $item)
-									<option value="{{$item->id}}">{{$item->name}}</option>
-								@endforeach
-							</select>
-							@error('title')
-							<div class="invalid-feedback">
-								{{$message}}
-							</div>
-							@enderror
-						</div>
-						<div class="form-group">
-							<label for="formFile" class="form-label">Thumbnail</label>
-							<input class="form-control @error('thumbnail') is-invalid @enderror" type="file" id="formFile" name="thumbnail">
-							@error('thumbnail')
-							<div class="invalid-feedback">
-								{{$message}}
-							</div>
-							@enderror
-						</div>
-						<div class="form-group">
-							<label for="">Body Post</label>
-							@error('body')
-									<p class="text-danger">{{$message}}</p>
-							@enderror
-							<textarea class="@error('body') is-invalid @enderror" name="body" id="summernote"></textarea>
-					</div>
-					{{-- <textarea name="editor1"></textarea> --}}
 						<button
 							type="submit"
 							class="btn btn-primary btn-user btn-block">
