@@ -34,6 +34,11 @@ Route::get('/visi', function(){
 	return view('user-components.visimisi');
 });
 
+//? Index 2
+Route::get('/index2', function(){
+	return view('index2');
+});
+
 //?route login 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [LoginController::class, 'create']);
