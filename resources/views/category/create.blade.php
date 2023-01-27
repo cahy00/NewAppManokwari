@@ -74,7 +74,7 @@
 									<tr>
 										<td>{{$loop->iteration}}</td>
 										<td>{{$item->name}}</td>
-										<td>Edit</td>
+										<td><a href="" onclick="return confirm('Are you sure?')">Hapus</a></td>
 									</tr>
 								@endforeach
 							</tbody>

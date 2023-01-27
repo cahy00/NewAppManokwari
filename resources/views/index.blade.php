@@ -63,7 +63,7 @@
 							<span>Jul 5th '22</span>
 						</div>
 						<h2>
-							<a href="{{route('post.showPost', [$hash->encodeHex($p->id), $p->slug])}}">{{$p->title}}</a>
+							<a href="{{route('post.showPost', [$hash->encodeHex($p->id), $p->slug])}}">{{strip_tags($p->title, '20')}}</a>
 						</h2>
 					</div>
 					@endif
