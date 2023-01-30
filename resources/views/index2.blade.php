@@ -95,7 +95,7 @@
               <div class="container">
               </div>
             </div>
-          </div>sdds
+          </div>sddssa
 
           <div class="carousel-item" style="background-image: url('{{asset('assets/bkn/bkn_mkw.png')}}')">
             <div class="carousel-container">
