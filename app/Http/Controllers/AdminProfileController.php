@@ -58,6 +58,7 @@ class AdminProfileController extends Controller
     public function edit($id)
     {
         //
+				
     }
 
     /**
