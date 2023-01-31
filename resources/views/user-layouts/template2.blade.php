@@ -82,21 +82,18 @@
   </header><!-- End Header -->
 
   <!-- ======= hero Section ======= -->
-    <section id="hero">
-			@yield('hero')
+	
 
-		</section>
-	<!-- End Hero Section -->
-
-  <main id="main">
-
+		<!-- End Hero Section -->
+		
+		<main id="main">
+			
     @yield('content')
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   @include('user-layouts.footer2')
-
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

@@ -18,6 +18,7 @@ use Hashids\Hashids;
 Route::get('/', [PostController::class, 'index']);
 // Route::get('/post/show/{id}/{slug}', [PostController::class, 'show'])->name('post.show');
 Route::get('/post/showPost/{id}/{slug}', [PostController::class, 'showPost'])->name('post.showPost');
+Route::get('/post/showPost2/{id}/{slug}', [PostController::class, 'showPost2'])->name('post.showPost2');
 
 //?route category untuk user
 Route::get('/category/show/{id}/{slug}', [CategoryController::class, 'show'])->name('category.show');

@@ -22,10 +22,10 @@ class PostController extends Controller
 				// $postcuy = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(3)->get();
 				// $post = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
 				// return view('index', compact('post', 'sidepost', 'postcuy', 'hash'));
-
+				$hash = new Hashids();
 				$latepost = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(3)->get();
 				$post = Post::with('category', 'user')->latest()->limit(1)->get();
-				return view('index2', compact('post', 'latepost'));
+				return view('index2', compact('post', 'latepost', 'hash'));
     }
 
     /**
@@ -71,6 +71,13 @@ class PostController extends Controller
 				$category = Category::all();
 				$post = Post::findOrFail($hash->decodeHex($id));
 				return view('user-components.show-post', compact('post', 'category', 'allpost'));
+		}
+
+		public function showPost2($id, $slug)
+		{
+			$hash = new Hashids();
+			$post = Post::findOrFail($hash->decodeHex($id));
+			return view('user-components.show-post2', compact('post', 'hash'));
 		}
 
     /**
