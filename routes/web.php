@@ -35,10 +35,8 @@ Route::get('/visi', function(){
 });
 
 //? Index 2
-Route::get('/index2', function(){
-	$latepost = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(3)->get();
-	$post = Post::with('category', 'user')->latest()->limit(1)->get();
-	return view('index2', compact('post', 'latepost'));
+Route::get('/show-post2', function(){
+	return view('user-components.show-post2');
 });
 
 //?route login 

@@ -1,5 +1,45 @@
 @extends('user-layouts.template2')
 
+@section('hero')
+<div class="hero-container">
+	<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+		<ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+		<div class="carousel-inner" role="listbox">
+
+			<div class="carousel-item active" style="background-image: url('{{asset('assets/bkn/ba.png')}}')">
+				<div class="carousel-container">
+					<div class="container">
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item" style="background-image: url('{{asset('assets/bkn/bkn_mkw.png')}}')">
+				<div class="carousel-container">
+					<div class="container">
+						<h2 class="animate__animated animate__fadeInDown">Badan Kepegawaian Negara</h2>
+						<p class="animate__animated animate__fadeInUp">
+							Kantor Regional XIV Manokwari
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+		</a>
+
+		<a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+			<span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+		</a>
+
+	</div>
+</div>
+@endsection
+
 @section('content')
 <div id="about" class="about-area area-padding">
 	<div class="container">
@@ -18,7 +58,7 @@
 				<div class="well-left">
 					<div class="single-well">
 						<a href="#">
-							<img src="assets/img/about/1.jpg" alt="" width="700px" height="25%">
+							<img src="assets/img/about/2.jpg" class="position-relative" alt="" width="700px" height="25%">
 						</a>
 					</div>
 				</div>
@@ -31,7 +71,7 @@
 							<h4 class="sec-head">{{$item->title}}</h4>
 						</a>
 						<p>
-							{!! Str::limit($item->excerpt, '150') !!}
+							{{ Str::limit($item->excerpt, '250') }}
 						</p>
 					</div>
 				</div>
@@ -68,15 +108,15 @@
 						<div class="blog-meta">
 							<span class="comments-type">
 								<i class="fa fa-comment-o"></i>
-								<a href="#">13 comments</a>
+								<a href="#">{{$latepost->user->name}}</a>
 							</span>
 							<span class="date-type">
-								<i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
+								<i class="fa fa-calendar"></i>{{$latepost->created_at}}
 							</span>
 						</div>
 						<div class="blog-text">
 							<h4>
-								<a href="blog.html">{{$latepost->title}}</a>
+								<a href="/show-post2">{{$latepost->title}}</a>
 							</h4>
 							<p>
 								{!! strip_tags($latepost->excerpt, '100') !!}

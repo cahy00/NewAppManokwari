@@ -17,11 +17,15 @@ class PostController extends Controller
      */
     public function index()
     {
-				$hash = new Hashids();
-				$sidepost = Post::with('category', 'user')->latest()->limit(1)->get();
-				$postcuy = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(3)->get();
-				$post = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
-				return view('index', compact('post', 'sidepost', 'postcuy', 'hash'));
+				// $hash = new Hashids();
+				// $sidepost = Post::with('category', 'user')->latest()->limit(1)->get();
+				// $postcuy = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(3)->get();
+				// $post = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
+				// return view('index', compact('post', 'sidepost', 'postcuy', 'hash'));
+
+				$latepost = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(3)->get();
+				$post = Post::with('category', 'user')->latest()->limit(1)->get();
+				return view('index2', compact('post', 'latepost'));
     }
 
     /**

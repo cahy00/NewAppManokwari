@@ -82,9 +82,11 @@
   </header><!-- End Header -->
 
   <!-- ======= hero Section ======= -->
-  <section id="hero">
-    @include('user-layouts.hero2')
-  </section><!-- End Hero Section -->
+    <section id="hero">
+			@yield('hero')
+
+		</section>
+	<!-- End Hero Section -->
 
   <main id="main">
 
