@@ -77,7 +77,9 @@ class PostController extends Controller
 		{
 			$hash = new Hashids();
 			$post = Post::findOrFail($hash->decodeHex($id));
-			return view('user-components.show-post2', compact('post', 'hash'));
+			$allcategories = Category::with('posts')->orderBy('created_at', 'ASC')->limit(5)->get();
+			$allpost = Post::with('category', 'user')->orderBy('created_at', 'ASC')->get();
+			return view('user-components.show-post2', compact('post', 'hash', 'allpost', 'allcategories'));
 		}
 
     /**

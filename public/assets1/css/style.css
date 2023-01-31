@@ -295,10 +295,10 @@ div#preloader {
 }
 
 .header-bg {
-    background: url(../img/background/page-header.jpg);
+    background: url(../../assets/bkn/bkn_mkw.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: bottom center;
     padding: 120px 0 60px;
 }
 
