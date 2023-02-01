@@ -11,11 +11,6 @@ use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
-		public function __construct()
-		{
-			$allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
-			return $allpost;
-		}
     /**
      * Display a listing of the resource.
      *
@@ -77,16 +72,16 @@ class CategoryController extends Controller
      */
     public function show($id, $slug)
     {
-				// $hash = new Hashids();
-				// $category = Category::all();
-        // $categoryShow = Category::findOrFail($hash->decodeHex($id))->get();
-				// $allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
-				// return view('user-components.category-section', compact('categoryShow', 'hash', 'allpost', 'category'));
-
-				// $category = Category::findOrFail(1)->post->title;
-				// $post = Post::first()->category->name;
-				$post = Category::all()->post->title;
-				dd($post);
+			// $category = Category::all();
+			// $categoryShow = Category::findOrFail($hash->decodeHex($id))->get();
+			// $allpost = Post::with(['category', 'user'])->orderBy('created_at', 'DESC')->limit(10)->get();
+			// return view('user-components.category-section', compact('categoryShow', 'hash', 'allpost', 'category'));
+			
+			// $category = Category::findOrFail(1)->post->title;
+			// $post = Post::first()->category->name;
+				$hash = new Hashids();
+				$post = Category::findOrFail($hash->decodeHex($id))->with('posts')->first();
+				return view('user-category.index', compact('hash', 'post'));
     }
 
     /**

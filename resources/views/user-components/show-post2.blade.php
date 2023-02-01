@@ -68,7 +68,7 @@
 							<ul>
 								@foreach ($allcategories as $category)
 								<li>
-									<a href="#">{{$category->name}}</a>
+									<a href="{{route('category.show', [$hash->encodeHex($category->id), $category->slug])}}">{{$category->name}}</a>
 								</li>
 								@endforeach
 							</ul>
