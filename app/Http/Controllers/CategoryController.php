@@ -80,7 +80,7 @@ class CategoryController extends Controller
 			// $category = Category::findOrFail(1)->post->title;
 			// $post = Post::first()->category->name;
 				$hash = new Hashids();
-				$post = Category::findOrFail($hash->decodeHex($id))->with('posts')->first();
+				$post = Category::findOrFail($hash->decodeHex($id));
 				return view('user-category.index', compact('hash', 'post'));
     }
 
