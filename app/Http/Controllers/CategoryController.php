@@ -81,7 +81,9 @@ class CategoryController extends Controller
 			// $post = Post::first()->category->name;
 				$hash = new Hashids();
 				$post = Category::findOrFail($hash->decodeHex($id));
-				return view('user-category.index', compact('hash', 'post'));
+				$allpost = Post::with('category', 'user')->orderBy('created_at', 'ASC')->get();
+				$allcategory = Category::all();
+				return view('user-category.index', compact('hash', 'post', 'allpost', 'allcategory'));
     }
 
     /**

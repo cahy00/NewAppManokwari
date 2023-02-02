@@ -25,6 +25,15 @@ Route::get('/category/show/{id}/{slug}', [CategoryController::class, 'show'])->n
 Route::get('/contact', function(){
 	return view('user-layouts.contact');
 });
+
+Route::get('/halaman2', function(){
+	$hash = new Hashids();
+	$sidepost = Post::with('category', 'user')->latest()->limit(1)->get();
+	$postcuy = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
+	$post = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
+	return view('index', compact('sidepost', 'postcuy', 'post', 'hash'));
+});
+
 Route::get('/category', [CategoryController::class, 'index']);
 
 Route::get('/profile', function(){

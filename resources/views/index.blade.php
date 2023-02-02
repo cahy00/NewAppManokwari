@@ -72,8 +72,6 @@
 				<div class="col-lg-4 border-start custom-border">
 					@foreach ($postcuy as $p)
 						@if ($p->id % 2 == 0)
-
-
 						<div class="post-entry-1">
 							<a href="{{route('post.showPost', [$hash->encodeHex($p->id), $p->slug])}}"
 								><img

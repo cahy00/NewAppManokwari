@@ -50,6 +50,7 @@
 			</div>
 		</div>
 		<div class="row">
+			
 			<!-- single-well start-->
 			@foreach ($post as $item)
 					

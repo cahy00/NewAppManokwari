@@ -46,53 +46,19 @@
 											<h4>recent post</h4>
 											<div class="recent-post">
 												<!-- start single post -->
+												@foreach ($allpost as $allpost)
+														
 												<div class="recent-single-post">
 													<div class="post-img">
 														<a href="#">
-															<img src="assets/img/blog/1.jpg" alt="">
+															<img src="{{asset($allpost->thumbnail)}}" alt="">
 														</a>
 													</div>
 													<div class="pst-content">
 														<p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
 													</div>
 												</div>
-												<!-- End single post -->
-												<!-- start single post -->
-												<div class="recent-single-post">
-													<div class="post-img">
-														<a href="#">
-															<img src="assets/img/blog/2.jpg" alt="">
-														</a>
-													</div>
-													<div class="pst-content">
-														<p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-													</div>
-												</div>
-												<!-- End single post -->
-												<!-- start single post -->
-												<div class="recent-single-post">
-													<div class="post-img">
-														<a href="#">
-															<img src="assets/img/blog/3.jpg" alt="">
-														</a>
-													</div>
-													<div class="pst-content">
-														<p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-													</div>
-												</div>
-												<!-- End single post -->
-												<!-- start single post -->
-												<div class="recent-single-post">
-													<div class="post-img">
-														<a href="#">
-															<img src="assets/img/blog/4.jpg" alt="">
-														</a>
-													</div>
-													<div class="pst-content">
-														<p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-													</div>
-												</div>
-												<!-- End single post -->
+												@endforeach
 											</div>
 										</div>
 										<!-- recent end -->
@@ -101,27 +67,12 @@
 										<div class="left-blog">
 											<h4>categories</h4>
 											<ul>
+												@foreach ($allcategory as $category)
+														
 												<li>
-													<a href="#">Portfolio</a>
+													<a href="{{route('category.show', [$hash->encodeHex($category->id), $category->slug])}}">{{$category->name}}</a>
 												</li>
-												<li>
-													<a href="#">Project</a>
-												</li>
-												<li>
-													<a href="#">Design</a>
-												</li>
-												<li>
-													<a href="#">wordpress</a>
-												</li>
-												<li>
-													<a href="#">Joomla</a>
-												</li>
-												<li>
-													<a href="#">Html</a>
-												</li>
-												<li>
-													<a href="#">Website</a>
-												</li>
+												@endforeach
 											</ul>
 										</div>
 									</div>
