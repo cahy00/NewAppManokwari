@@ -61,7 +61,7 @@
 							</div>
 						</div>
 						<!-- recent end -->
-					</div>dssdsddssd
+					</div>
 					<div class="single-blog-page">
 						<div class="left-blog">
 							<h4>categories</h4>
