@@ -73,7 +73,7 @@
 								@endforeach
 							</ul>
 						</div>
-					</div>dskjdsds
+					</div>
 					<div class="single-blog-page">
 						<div class="left-blog">
 							<h4>archive</h4>
